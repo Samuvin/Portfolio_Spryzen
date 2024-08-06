@@ -1,0 +1,193 @@
+/* styles.css */
+
+/* General Resets and Utilities */
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+.my-8 {
+	margin: 2rem 0;
+}
+
+.first\:mt-0:first-child {
+	margin-top: 0;
+}
+
+.last\:mb-0:last-child {
+	margin-bottom: 0;
+}
+
+.w-60 {
+	width: 60%;
+}
+
+.w-80 {
+	width: 80%;
+}
+
+.mx-auto {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.flex {
+	display: flex;
+}
+
+.flex-col {
+	flex-direction: column;
+}
+
+.items-start {
+	align-items: flex-start;
+}
+
+.justify-between {
+	justify-content: space-between;
+}
+
+.font-bold {
+	font-weight: bold;
+}
+
+.text-2xl {
+	font-size: 1.5rem;
+}
+
+.sm\:text-xl {
+	font-size: 1.25rem;
+}
+
+.xs\:text-lg {
+	font-size: 1.125rem;
+}
+
+.capitalize {
+	text-transform: capitalize;
+}
+
+.text-primary {
+	color: #b63e96;
+}
+
+.dark\:text-primaryDark {
+	color: #58e6d9;
+}
+
+.text-dark-75 {
+	color: rgba(0, 0, 0, 0.75);
+}
+
+.font-medium {
+	font-weight: 500;
+}
+
+.dark\:text-light-50 {
+	color: rgba(255, 255, 255, 0.5);
+}
+
+.xs\:text-sm {
+	font-size: 0.875rem;
+}
+
+.w-full {
+	width: 100%;
+}
+
+.md\:text-sm {
+	font-size: 0.875rem;
+}
+
+.my-64 {
+	margin: 16rem 0;
+}
+
+.font-bold {
+	font-weight: bold;
+}
+
+.text-8xl {
+	font-size: 6rem;
+}
+
+.mb-32 {
+	margin-bottom: 8rem;
+}
+
+.w-full {
+	width: 100%;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.md\:text-6xl {
+	font-size: 3.75rem;
+}
+
+.xs\:text-4xl {
+	font-size: 2.25rem;
+}
+
+.md\:mb-16 {
+	margin-bottom: 4rem;
+}
+
+.relative {
+	position: relative;
+}
+
+.absolute {
+	position: absolute;
+}
+
+.left-9 {
+	left: 2.25rem;
+}
+
+.top-0 {
+	top: 0;
+}
+
+.w-4 {
+	width: 0.25rem;
+}
+
+.md\:w-2 {
+	width: 0.125rem;
+}
+
+.md\:left-30 {
+	left: 7.5rem;
+}
+
+.xs\:left-20 {
+	left: 5rem;
+}
+
+.h-full {
+	height: 100%;
+}
+
+.bg-dark {
+	background-color: #1b1b1b;
+}
+
+.dark\:bg-primaryDark {
+	background-color: #58e6d9;
+}
+
+.dark\:shadow-3xl {
+	box-shadow: 0 15px 15px 1px rgba(80, 230, 217, 0.4);
+}
+
+.ml-4 {
+	margin-left: 1rem;
+}
+
+.xs\:ml-2 {
+	margin-left: 0.5rem;
+}

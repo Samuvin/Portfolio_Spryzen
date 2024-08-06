@@ -1,0 +1,66 @@
+/* Global Styles */
+body {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: Arial, sans-serif;
+}
+
+.box {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	width: 65vw;
+	height: 55vh;
+	display: flex;
+	z-index: 1;
+}
+
+.sub-box {
+	width: 50%;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.image-container {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.pic {
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translate(-50%, 0%);
+	width: 100%;
+	height: auto;
+	z-index: 2; /* Ensure it is above other elements */
+}
+
+.text {
+	font-size: calc(1em + 1.5vw);
+	padding: 2rem;
+	cursor: pointer;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+}
+
+.text > *:last-child {
+	font-size: calc(0.5rem + 1.5vw);
+	font-weight: 300;
+}
+
+.box-transition {
+	transition: height 2s spring;
+}
+
+.img-visible {
+	opacity: 1;
+	transition: opacity 1s;
+}
