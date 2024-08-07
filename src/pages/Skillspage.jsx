@@ -1,10 +1,11 @@
 import React from "react";
 import Skills from "../container/Skills/Skills";
-import Skillset from "../container/Skillset/Skillset";
-
+import TransitionEffect from "../Components/TransitionEffect";
 const Skillspage = () => {
 	return (
 		<>
+			{" "}
+			<TransitionEffect />
 			<Skills />
 		</>
 	);

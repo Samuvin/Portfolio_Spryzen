@@ -154,6 +154,7 @@ import { motion } from "framer-motion";
 import { AppWrap } from "../../wrapper";
 import { images } from "../../constants";
 import "./Header.css";
+import test from "./test.png";
 
 const scaleVariants = {
 	whileInView: {
@@ -217,10 +218,10 @@ const Header = () => {
 					style={{ zIndex: 2000 }}
 					className={`center-button ${click ? "clicked" : ""}`}
 					onClick={handleClick}>
-					<YinYang
-						width={click ? 120 : 200}
-						height={click ? 120 : 200}
-						fill="currentColor"
+					<img
+						src={test}
+						alt=""
+						className="prefix__svg-inline--fa prefix__fa-yin-yang prefix__fa-w-16"
 					/>
 				</button>
 

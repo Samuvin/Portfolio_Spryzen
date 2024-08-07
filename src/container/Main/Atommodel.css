@@ -1,0 +1,167 @@
+.proton {
+	width: 80px;
+	height: 80px;
+	background: radial-gradient(circle, deepskyblue, dodgerblue);
+	border-radius: 50%;
+	position: relative;
+	box-shadow: 0 0 20px deepskyblue, 0 0 40px dodgerblue;
+}
+
+.electron {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	animation: rotation 3s infinite linear;
+	border-radius: 50%;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.orbit1 {
+	padding: 50px;
+	animation-duration: 3s;
+	border: 1px solid silver;
+}
+
+.orbit2 {
+	padding: 70px;
+	animation-duration: 4s;
+	border: 1px solid lightgray;
+}
+
+.orbit3 {
+	padding: 90px;
+	animation-duration: 5s;
+	border: 1px solid white;
+}
+
+.electron::before {
+	content: "";
+	width: 20px;
+	height: 20px;
+	background: radial-gradient(circle, deeppink, hotpink);
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	border-radius: 50%;
+	box-shadow: 0 0 10px deeppink, 0 0 20px hotpink;
+}
+
+@keyframes rotation {
+	0% {
+		transform: translate(-50%, -50%) rotate(0deg);
+	}
+	100% {
+		transform: translate(-50%, -50%) rotate(360deg);
+	}
+}
+
+.orbit1:nth-child(1) {
+	animation-delay: 0s;
+}
+
+.orbit1:nth-child(2) {
+	animation-delay: 1s;
+}
+
+.orbit1:nth-child(3) {
+	animation-delay: 2s;
+}
+
+.orbit2:nth-child(4) {
+	animation-delay: 0s;
+}
+
+.orbit2:nth-child(5) {
+	animation-delay: 1.33s;
+}
+
+.orbit2:nth-child(6) {
+	animation-delay: 2.66s;
+}
+
+.orbit3:nth-child(7) {
+	animation-delay: 0s;
+}
+
+.orbit3:nth-child(8) {
+	animation-delay: 1.66s;
+}
+
+.orbit3:nth-child(9) {
+	animation-delay: 3.33s;
+}
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+	.proton {
+		width: 60px;
+		height: 60px;
+	}
+
+	.orbit1 {
+		padding: 40px;
+	}
+
+	.orbit2 {
+		padding: 50px;
+	}
+
+	.orbit3 {
+		padding: 60px;
+	}
+
+	.electron::before {
+		width: 15px;
+		height: 15px;
+	}
+}
+
+@media (max-width: 768px) {
+	.proton {
+		width: 50px;
+		height: 50px;
+	}
+
+	.orbit1 {
+		padding: 30px;
+	}
+
+	.orbit2 {
+		padding: 40px;
+	}
+
+	.orbit3 {
+		padding: 50px;
+	}
+
+	.electron::before {
+		width: 10px;
+		height: 10px;
+	}
+}
+
+@media (max-width: 480px) {
+	.proton {
+		width: 40px;
+		height: 40px;
+	}
+
+	.orbit1 {
+		padding: 20px;
+	}
+
+	.orbit2 {
+		padding: 30px;
+	}
+
+	.orbit3 {
+		padding: 40px;
+	}
+
+	.electron::before {
+		width: 8px;
+		height: 8px;
+	}
+}
