@@ -1,3 +1,56 @@
+.header-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+}
+
+.app__header-circles {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+}
+
+.app__header-circles.left {
+	left: 0;
+}
+
+.app__header-circles.right {
+	right: 0;
+}
+
+.center-button {
+	position: relative;
+	z-index: 2000;
+}
+
+.circle-cmp {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	background: #f5f5f5;
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.app__header-info,
+.app__header-img {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.app__header-img img,
+.app__header-img .overlay_circle {
+	width: 100%;
+	height: auto;
+}
+
 #home {
 	position: relative;
 	background-size: cover;
@@ -176,7 +229,7 @@ body {
 .app__header-circles {
 	flex: 0.75;
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
 	justify-content: space-evenly;
 	align-items: flex-start;
 	height: 100%;

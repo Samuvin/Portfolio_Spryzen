@@ -1,6 +1,5 @@
 // import React, { useState } from "react";
 // import { motion } from "framer-motion";
-
 // import { AppWrap } from "../../wrapper";
 // import { images } from "../../constants";
 // import "./Header.css";
@@ -39,10 +38,30 @@
 
 // const Header = () => {
 // 	const [click, setClick] = useState(false);
-// 	const handleClick = () => setClick(!click);
+// 	const [showComponent, setShowComponent] = useState(true);
+// 	const handleClick = () => {
+// 		setClick(!click);
+// 		setShowComponent(false); // Hide the new component on button click
+// 	};
+
 // 	return (
 // 		<>
 // 			<div>
+// 				{!click && (
+// 					<motion.div
+// 						variants={scaleVariants}
+// 						whileInView={scaleVariants.whileInView}
+// 						className="app__header-circles">
+// 						{[images.flutter, images.redux, images.sass].map(
+// 							(circle, index) => (
+// 								<div className="circle-cmp app__flex" key={`circle-${index}`}>
+// 									<img src={circle} alt="profile_bg" />
+// 								</div>
+// 							)
+// 						)}
+// 					</motion.div>
+// 				)}
+
 // 				<button
 // 					style={{ zIndex: 2000 }}
 // 					className={`center-button ${click ? "clicked" : ""}`}
@@ -104,19 +123,6 @@
 // 								/>
 // 							</motion.div>
 // 						</motion.div>
-
-// 						{/* <motion.div
-// 							variants={scaleVariants}
-// 							whileInView={scaleVariants.whileInView}
-// 							className="app__header-circles">
-// 							{[images.flutter, images.redux, images.sass].map(
-// 								(circle, index) => (
-// 									<div className="circle-cmp app__flex" key={`circle-${index}`}>
-// 										<img src={circle} alt="profile_bg" />
-// 									</div>
-// 								)
-// 							)}
-// 						</motion.div> */}
 // 					</div>
 // 				</motion.div>
 // 			</div>
@@ -145,7 +151,6 @@
 // export default AppWrap(Header, "home");
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import TransitionEffect from "../../Components/TransitionEffect";
 import { AppWrap } from "../../wrapper";
 import { images } from "../../constants";
 import "./Header.css";
@@ -184,14 +189,32 @@ const pageTransition = {
 
 const Header = () => {
 	const [click, setClick] = useState(false);
-	const handleClick = () => setClick(!click);
+	const [showComponent, setShowComponent] = useState(true);
+	const handleClick = () => {
+		setClick(!click);
+		setShowComponent(false); // Hide the new component on button click
+	};
 
 	return (
 		<>
-			<div>
-				<TransitionEffect />
+			<div className="header-container">
+				{!click && (
+					<motion.div
+						variants={scaleVariants}
+						whileInView={scaleVariants.whileInView}
+						className="app__header-circles left">
+						{[images.flutter, images.redux, images.sass].map(
+							(circle, index) => (
+								<div className="circle-cmp app__flex" key={`circle-${index}`}>
+									<img src={circle} alt="profile_bg" />
+								</div>
+							)
+						)}
+					</motion.div>
+				)}
+
 				<button
-					style={{ zIndex: 100 }}
+					style={{ zIndex: 2000 }}
 					className={`center-button ${click ? "clicked" : ""}`}
 					onClick={handleClick}>
 					<YinYang
@@ -200,6 +223,22 @@ const Header = () => {
 						fill="currentColor"
 					/>
 				</button>
+
+				{!click && (
+					<motion.div
+						variants={scaleVariants}
+						whileInView={scaleVariants.whileInView}
+						className="app__header-circles right">
+						{[images.flutter, images.redux, images.sass].map(
+							(circle, index) => (
+								<div className="circle-cmp app__flex" key={`circle-${index}`}>
+									<img src={circle} alt="profile_bg" />
+								</div>
+							)
+						)}
+					</motion.div>
+				)}
+
 				<motion.div
 					className="app__header app__flex"
 					initial="initial"
