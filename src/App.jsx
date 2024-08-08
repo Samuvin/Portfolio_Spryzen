@@ -5,14 +5,13 @@ import { AnimatePresence } from "framer-motion";
 import AboutPage from "./pages/Aboutpage";
 import Projectspage from "./pages/Projectspage";
 import Skillspage from "./pages/Skillspage";
-import { Footer, Header, Nav } from "./container";
+import { Nav } from "./container";
 import "./App.scss";
 import ContatcPage from "./pages/ContatcPage";
 import { lazy, Suspense } from "react";
-import Loading from "./container/Main/subComponents/Loading";
-
+import Loading from "./container/Main/Loading";
 //Components
-const Main = lazy(() => import("./container/Main/components/Main"));
+const Main = lazy(() => import("./container/Main/Main"));
 
 const App = () => {
 	const location = useLocation(); // Get the current location
