@@ -1,11 +1,12 @@
 import React from "react";
-import Testimonial from "../container/Testimonial/Testimonial";
+
 import TransitionEffect from "../Components/TransitionEffect";
+import Qualification from "../container/Qualification/Qualification";
 const Projectspage = () => {
 	return (
 		<>
 			<TransitionEffect />
-			<Testimonial />
+			<Qualification />
 		</>
 	);
 };

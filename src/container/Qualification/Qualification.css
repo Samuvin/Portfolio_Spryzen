@@ -1,7 +1,30 @@
-/* App.css */
-.App {
-	font-family: sans-serif;
+.Project_Container {
+	padding-top: 25px;
+}
+
+@media (max-width: 1200px) {
+	.Project_Container {
+		padding-top: 15px;
+	}
+}
+
+@media (max-width: 768px) {
+	.Project_Container {
+		padding-top: 10px;
+	}
+}
+
+@media (max-width: 480px) {
+	.Project_Container {
+		padding-top: 5px;
+	}
+}
+
+.timeline-heading {
+	margin-top: 20px;
+	font-size: 2.5em;
 	text-align: center;
+	color: #333;
 }
 
 /* Ensure vertical timeline line */

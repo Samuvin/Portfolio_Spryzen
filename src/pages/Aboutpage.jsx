@@ -1,8 +1,6 @@
 import React from "react";
 import About from "../container/About/About";
-
-import Achievements from "../container/Achievements/Achievements";
-import Qualification from "../container/Qualification/Qualification";
+import Testimonial from "../container/Testimonial/Testimonial";
 import Works from "../container/Work/Work";
 import TransitionEffect from "../Components/TransitionEffect";
 const AboutPage = () => {
@@ -11,14 +9,9 @@ const AboutPage = () => {
 			<TransitionEffect />
 			<About />
 			<Works />
-			<Qualification />
+			<Testimonial />
 		</>
 	);
 };
 
 export default AboutPage;
-// export default AppWrap(
-// 	MotionWrap(About, "app__about app__flex"),
-// 	"about",
-// 	"app__whitebg"
-// );

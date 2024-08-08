@@ -6,6 +6,7 @@ import {
 	VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
+import { AppWrap, MotionWrap } from "../../wrapper";
 
 const WorkIcon = () => (
 	<motion.div
@@ -66,9 +67,11 @@ const TimelineElement = ({
 		</VerticalTimelineElement>
 	);
 };
-export default function App() {
+
+function App() {
 	return (
-		<div className="App">
+		<div className="Project_Container">
+			<h1 className="timeline-heading">My Professional Timeline</h1>
 			<VerticalTimeline>
 				<TimelineElement
 					className="vertical-timeline-element--work"
@@ -106,7 +109,7 @@ export default function App() {
 					icon={<WorkIcon />}
 					position="left"
 				/>
-				<TimelineElement
+				{/* <TimelineElement
 					className="vertical-timeline-element--education"
 					date="April 2013"
 					title="Content Marketing for Web, Mobile and Social Media"
@@ -132,7 +135,7 @@ export default function App() {
 					content="Creative Direction, Visual Design"
 					icon={<WorkIcon />}
 					position="right"
-				/>
+				/> */}
 				<VerticalTimelineElement
 					iconStyle={{ background: "rgb(16, 204, 82)", color: "#fff" }}
 					icon={<WorkIcon />}
@@ -141,3 +144,9 @@ export default function App() {
 		</div>
 	);
 }
+
+export default AppWrap(
+	MotionWrap(App, "app__works app__flex"),
+	"App",
+	"app__primarybg"
+);

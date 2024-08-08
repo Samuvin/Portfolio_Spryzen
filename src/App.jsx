@@ -7,7 +7,7 @@ import Projectspage from "./pages/Projectspage";
 import Skillspage from "./pages/Skillspage";
 import { Footer, Header, Nav } from "./container";
 import "./App.scss";
-
+import ContatcPage from "./pages/ContatcPage";
 import { lazy, Suspense } from "react";
 import Loading from "./container/Main/subComponents/Loading";
 
@@ -27,7 +27,7 @@ const App = () => {
 						<Route path="/about" element={<AboutPage />} />
 						<Route path="/skills" element={<Skillspage />} />
 						<Route path="/projects" element={<Projectspage />} />
-						<Route path="/contact" element={<Footer />} />
+						<Route path="/contact" element={<ContatcPage />} />
 					</Routes>
 				</AnimatePresence>
 			</div>

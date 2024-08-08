@@ -1,5 +1,5 @@
 import React, { lazy, Suspense, useState } from "react";
-import { NavLink, useNavigate, Route, Routes } from "react-router-dom";
+import { NavLink, Route, Routes } from "react-router-dom";
 import { motion } from "framer-motion";
 import Intro from "./Intro";
 import Loading from "../subComponents/Loading";
@@ -10,6 +10,8 @@ import Projectspage from "../../../pages/Projectspage";
 import Skillspage from "../../../pages/Skillspage";
 import Footer from "../../footer/Footer";
 import { images } from "../../../constants";
+import TransitionEffect from "../../../Components/TransitionEffect";
+
 const SocialIcons = lazy(() => import("./../subComponents/SocialIcons"));
 const LogoComponent = lazy(() => import("./../subComponents/LogoComponent"));
 
@@ -49,6 +51,7 @@ const Main = () => {
 	</Routes>;
 	return (
 		<Suspense fallback={<Loading />}>
+			<TransitionEffect />
 			<motion.div
 				className="main-container"
 				key="modal"
