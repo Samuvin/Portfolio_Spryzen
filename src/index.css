@@ -22,6 +22,10 @@
 }
 /*==================== VARIABLES CSS ====================*/
 :root {
+	--Block_First: #5658a7;
+	--Block_Second: #7c7dc6;
+	--Block_Third: #252555;
+
 	--logo-color: black;
 	--intro-border: #151632;
 	--header-height: 3rem;
@@ -105,6 +109,10 @@
 
 /*========== Variables Dark theme ==========*/
 body.dark-theme {
+	--Block_First: #895bb8;
+	--Block_Second: #65439d;
+	--Block_Third: #413479;
+
 	--intro-border: #43459d;
 	--line-color: white;
 	--logo-color: white;
@@ -112,7 +120,7 @@ body.dark-theme {
 	--Achievement-Container-Buttons: #343579;
 	--certificate-container: #343579;
 	--Project-title: #6b6cbf;
-	--Project-content: #151632;
+	--Project-content: #030303;
 	--Project-Subtitle: #343579;
 	--Contact-Form: white;
 

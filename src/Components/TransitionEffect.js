@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import "./Transition.css";
 import React from "react";
 
 const TransitionEffect = () => {
