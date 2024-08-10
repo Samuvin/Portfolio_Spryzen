@@ -6,7 +6,7 @@ import AboutPage from "./pages/Aboutpage";
 import Projectspage from "./pages/Projectspage";
 import Skillspage from "./pages/Skillspage";
 import { Nav } from "./container";
-import "./App.scss";
+import "./App.css";
 import ContatcPage from "./pages/ContatcPage";
 import { lazy, Suspense } from "react";
 import Loading from "./container/Main/Loading";
