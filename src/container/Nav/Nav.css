@@ -58,7 +58,7 @@
 	box-shadow: 0 -4px 6px rgba(31, 38, 135, 0.2),
 		0 4px 6px rgba(31, 38, 135, 0.2);
 	position: relative;
-	z-index: 5;
+	z-index: 10;
 }
 
 .nav__logo,
@@ -68,6 +68,10 @@
 }
 .nav__logo:hover {
 	color: var(--first-color-alt);
+}
+
+a.nav__logo {
+	margin-left: 1rem;
 }
 
 .nav__toggle {
