@@ -22,6 +22,7 @@
 }
 /*==================== VARIABLES CSS ====================*/
 :root {
+	--theme-body: #fff;
 	--Block_First: #5658a7;
 	--Block_Second: #7c7dc6;
 	--Block_Third: #252555;
@@ -109,6 +110,7 @@
 
 /*========== Variables Dark theme ==========*/
 body.dark-theme {
+	--theme-body: var(--glossy-background);
 	--Block_First: #895bb8;
 	--Block_Second: #65439d;
 	--Block_Third: #413479;
