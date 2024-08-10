@@ -1,9 +1,7 @@
 import React, { useState } from "react";
-
 import { images } from "../../constants";
 import { AppWrap, MotionWrap } from "../../wrapper";
-import { client } from "../../client";
-import "./Footer.scss";
+import "./Footer.css";
 
 const Footer = () => {
 	const [formData, setFormData] = useState({
@@ -24,20 +22,11 @@ const Footer = () => {
 	const handleSubmit = () => {
 		setLoading(true);
 
-		const contact = {
-			_type: "contact",
-			name: formData.name,
-			email: formData.email,
-			message: formData.message,
-		};
-
-		client
-			.create(contact)
-			.then(() => {
-				setLoading(false);
-				setIsFormSubmitted(true);
-			})
-			.catch((err) => console.log(err));
+		// Simulate an API call or other logic
+		setTimeout(() => {
+			setLoading(false);
+			setIsFormSubmitted(true);
+		}, 1000); // Simulate a delay (e.g., 1 second)
 	};
 
 	return (
@@ -47,22 +36,23 @@ const Footer = () => {
 			<div className="app__footer-cards">
 				<div className="app__footer-card ">
 					<img src={images.email} alt="email" />
-					<a href="mailto:samuvin.j@gmail.com" className="p-text">
+					<a href="mailto:samuvin.j@gmail.com" className="Intro-text">
 						hello@micael.com
 					</a>
 				</div>
 				<div className="app__footer-card">
 					<img src={images.mobile} alt="phone" />
-					<a href="tel:+1 (123) 456-7890" className="p-text">
+					<a href="tel:+1 (123) 456-7890" className="Intro-text">
 						+1 (123) 456-7890
 					</a>
 				</div>
 			</div>
+
 			{!isFormSubmitted ? (
 				<div className="app__footer-form app__flex">
 					<div className="app__flex">
 						<input
-							className="p-text"
+							className="Name-text "
 							type="text"
 							placeholder="Your Name"
 							name="name"
