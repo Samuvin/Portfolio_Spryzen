@@ -24,6 +24,10 @@
 :root {
 	--header-height: 3rem;
 	--Achievement-Container-Buttons: #313bac;
+	--Project-title: #6b6cbf;
+	--Project-content: #151632;
+	--Project-Subtitle: #343579;
+
 	--primary-color: #cbcce9;
 	--secondary-color: #313bac;
 	--black-color: #030303;
@@ -101,6 +105,9 @@ body.dark-theme {
 	--Achievement-Container: #343579;
 	--Achievement-Container-Buttons: #343579;
 	--certificate-container: #343579;
+	--Project-title: #6b6cbf;
+	--Project-content: #151632;
+	--Project-Subtitle: #343579;
 	--primary-color: rgba(255, 255, 255, 0.9); /* Whitish glowing */
 	--secondary-color: #6b6cbf; /* Slightly dimmed white */
 	--black-color: white;

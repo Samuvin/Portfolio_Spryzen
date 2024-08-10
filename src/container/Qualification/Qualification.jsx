@@ -1,6 +1,6 @@
-import React, { useState } from "react";
-import { motion } from "framer-motion";
+import React from "react";
 import "./Qualification.css";
+import { LiaAtomSolid } from "react-icons/lia";
 import {
 	VerticalTimeline,
 	VerticalTimelineElement,
@@ -9,16 +9,26 @@ import "react-vertical-timeline-component/style.min.css";
 import { AppWrap, MotionWrap } from "../../wrapper";
 
 const WorkIcon = () => (
-	<motion.div
-		className="vertical-timeline-element-icon motion"
-		animate={{ rotate: [0, 360] }}
-		transition={{ repeat: Infinity, duration: 2, ease: "linear" }}>
-		fds
-	</motion.div>
+	<div
+		style={{
+			display: "flex",
+			alignItems: "center",
+			justifyContent: "center",
+			width: "50px",
+			height: "50px",
+		}}>
+		<LiaAtomSolid
+			style={{
+				width: "80%",
+				height: "80%",
+				animation: "rotate 2s linear infinite", // Apply the rotation animation
+			}}
+		/>
+	</div>
 );
 
 const fix = {
-	background: "rgb(33, 150, 243)",
+	background: "#6B6CBF",
 	color: "#fff",
 };
 
@@ -31,11 +41,6 @@ const TimelineElement = ({
 	icon,
 	position,
 }) => {
-	const [isInView, setIsInView] = useState(false);
-
-	const initialY = 20;
-	const animateY = 0;
-
 	return (
 		<VerticalTimelineElement
 			position={position}
@@ -43,27 +48,13 @@ const TimelineElement = ({
 			date={date}
 			iconStyle={fix}
 			icon={icon}>
-			<motion.div
-				onViewportEnter={() => setIsInView(true)}
-				onViewportLeave={() => setIsInView(false)}
-				initial={{ opacity: 0, y: initialY }}
-				animate={
-					isInView ? { opacity: 1, y: animateY } : { opacity: 0, y: initialY }
-				}
-				transition={{ duration: 0.5 }}
-				className="timeline-content-container">
-				<motion.div
-					initial={{ opacity: 0, scale: 0.95 }}
-					animate={
-						isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.95 }
-					}
-					transition={{ duration: 0.5 }}
-					className="timeline-inner-content">
+			<div className="timeline-content-container">
+				<div className="timeline-inner-content">
 					<h3 className="vertical-timeline-element-title">{title}</h3>
 					<h4 className="vertical-timeline-element-subtitle">{subtitle}</h4>
-					<p>{content}</p>
-				</motion.div>
-			</motion.div>
+					<p className="Element-content">{content}</p>
+				</div>
+			</div>
 		</VerticalTimelineElement>
 	);
 };
@@ -71,7 +62,7 @@ const TimelineElement = ({
 function App() {
 	return (
 		<div className="Project_Container">
-			<h1 className="timeline-heading">My Professional Timeline</h1>
+			<h1 className="timeline-heading">Projects</h1>
 			<VerticalTimeline>
 				<TimelineElement
 					className="vertical-timeline-element--work"
@@ -109,35 +100,8 @@ function App() {
 					icon={<WorkIcon />}
 					position="left"
 				/>
-				{/* <TimelineElement
-					className="vertical-timeline-element--education"
-					date="April 2013"
-					title="Content Marketing for Web, Mobile and Social Media"
-					subtitle="Online Course"
-					content="Strategy, Social Media"
-					icon={<WorkIcon />}
-					position="right"
-				/>
-				<TimelineElement
-					className="vertical-timeline-element--education"
-					date="November 2012"
-					title="Agile Development Scrum Master"
-					subtitle="Certification"
-					content="Creative Direction, User Experience, Visual Design"
-					icon={<WorkIcon />}
-					position="left"
-				/>
-				<TimelineElement
-					className="vertical-timeline-element--education"
-					date="2002 - 2006"
-					title="Bachelor of Science in Interactive Digital Media Visual Imaging"
-					subtitle="Bachelor Degree"
-					content="Creative Direction, Visual Design"
-					icon={<WorkIcon />}
-					position="right"
-				/> */}
 				<VerticalTimelineElement
-					iconStyle={{ background: "rgb(16, 204, 82)", color: "#fff" }}
+					iconStyle={{ background: "#343579", color: "#fff" }}
 					icon={<WorkIcon />}
 				/>
 			</VerticalTimeline>
@@ -145,8 +109,4 @@ function App() {
 	);
 }
 
-export default AppWrap(
-	MotionWrap(App, "app__works app__flex"),
-	"App",
-	"app__primarybg"
-);
+export default AppWrap(MotionWrap(App, "app__works"));

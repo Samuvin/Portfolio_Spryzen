@@ -1,3 +1,4 @@
+/* Container styles with responsive padding */
 .Project_Container {
 	padding-top: 25px;
 }
@@ -20,16 +21,15 @@
 	}
 }
 
+/* Timeline heading styling */
 .timeline-heading {
 	margin-top: 20px;
 	font-size: 2.5em;
 	text-align: center;
-	color: #333;
+	color: var(--black-color);
 }
 
-/* Ensure vertical timeline line */
-/* Style the vertical timeline line */
-/* Basic styling for the vertical timeline line */
+/* Vertical timeline line styling */
 .vertical-timeline::before {
 	background: linear-gradient(
 		to bottom,
@@ -45,58 +45,60 @@
 	transition: transform 0.2s ease-out; /* Smooth transition for movement */
 }
 
-/* Animation effect for the vertical timeline line */
-@keyframes lineAnimation {
-	from {
-		transform: scaleY(0); /* Start with zero height */
-	}
-	to {
-		transform: scaleY(1); /* Expand to full height */
-	}
-}
-/* Make sure the container divs have height */
-.empty {
-	height: 600px;
-	border: 1px solid red;
-}
-
-/* Qualification.css */
-.timeline-content-container {
-	padding: 10px;
-	border-radius: 8px;
-	background: rgba(255, 255, 255, 0.9); /* Slightly translucent background */
-	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow for effect */
-}
-
-/* Style the inner content */
-.timeline-inner-content {
-	padding: 15px;
-	border-radius: 4px;
-	background: #fff; /* Solid background for inner content */
-}
-
-/* Style the vertical timeline line */
+/* Vertical timeline element styling */
 .vertical-timeline-element::before {
 	background: rgb(33, 150, 243); /* Line color */
 	width: 4px; /* Line thickness */
 	border-radius: 2px; /* Optional: makes the line rounded */
 }
 
-/* Style the circle icon */
+/* Circle icon styling */
 .vertical-timeline-element-icon {
 	background: rgb(33, 150, 243); /* Circle color */
 	color: #fff; /* Icon color */
 	border: 2px solid #fff; /* Optional: adds a border around the circle */
 	border-radius: 50%; /* Makes it a circle */
-	width: 40px; /* Circle size */
-	height: 40px; /* Circle size */
+	width: 50px; /* Increased circle size */
+	height: 50px; /* Increased circle size */
 	display: flex; /* Centering icon inside the circle */
 	align-items: center; /* Centering icon vertically */
 	justify-content: center; /* Centering icon horizontally */
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: adds shadow to the circle */
 	position: relative; /* For rotation animation */
+	overflow: hidden; /* Ensure that icon doesn't overflow the circle */
 }
 
+.vertical-timeline-element-title {
+	color: var(--Project-title); /* Change this to your desired title color */
+}
+
+.vertical-timeline-element-subtitle {
+	color: var(
+		--Project-Subtitle
+	); /* Change this to your desired subtitle color */
+}
+
+.Element-content {
+	color: var(--Project-content);
+}
+
+/* Add a higher specificity */
+.Project_Container .vertical-timeline-element-icon svg {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	position: unset;
+}
+
+/* Ensure icon is perfectly centered */
+.vertical-timeline-element-icon svg {
+	display: block;
+	width: 24px;
+	height: 24px;
+	position: relative;
+	margin-left: -12px;
+	margin-top: -12px;
+}
 /* Animation for rotating icon */
 .vertical-timeline-element-icon.motion {
 	animation: rotate 2s linear infinite;
@@ -111,10 +113,23 @@
 	}
 }
 
-/* Ensure the timeline content container is properly styled */
+/* Timeline content container styling */
 .timeline-content-container {
 	padding: 20px;
-	background: #fff;
+	background: rgba(255, 255, 255, 0.9); /* Slightly translucent background */
 	border-radius: 8px;
-	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for effect */
+}
+
+/* Inner content styling */
+.timeline-inner-content {
+	padding: 15px;
+	border-radius: 4px;
+	background: #fff; /* Solid background for inner content */
+}
+
+/* Height for the empty div (debugging purpose) */
+.empty {
+	height: 600px;
+	border: 1px solid red;
 }
