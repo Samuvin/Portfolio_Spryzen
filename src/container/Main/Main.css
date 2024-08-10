@@ -59,30 +59,6 @@ body {
 	transition: all 1s ease;
 }
 
-@media only screen and (max-width: 50em) {
-	.center {
-		top: 50%;
-		left: 50%;
-	}
-
-	.center.click {
-		top: 90%;
-		left: 90%;
-	}
-}
-
-@media only screen and (max-width: 30em) {
-	.center {
-		width: 150px;
-		height: 150px;
-	}
-
-	.center.click {
-		width: 40px;
-		height: 40px;
-	}
-}
-
 .contact {
 	color: var(--theme-text);
 	position: absolute;
@@ -96,14 +72,26 @@ body {
 	color: var(--theme-body);
 }
 
-.blog {
+.blog,
+.work {
 	color: var(--theme-text);
 	position: absolute;
-	top: 50%;
-	right: calc(1rem + 2vw);
-	transform: rotate(90deg) translate(-50%, -50%);
+	top: 45%; /* Ensure both have the same top value */
+	transform: translateY(
+		-50%
+	); /* Only translate on Y-axis to avoid misalignment */
 	z-index: 1;
 	text-decoration: none;
+}
+
+.blog {
+	right: calc(1rem + 2vw);
+	transform: rotate(90deg) translateY(-50%); /* Adjust transform to only translate on Y-axis */
+}
+
+.work {
+	left: calc(1rem + 2vw);
+	transform: rotate(-90deg) translateY(-50%); /* Adjust transform to only translate on Y-axis */
 }
 
 .blog.click {
@@ -114,16 +102,6 @@ body {
 	.blog.click {
 		text-shadow: 0 0 4px #000;
 	}
-}
-
-.work {
-	color: var(--theme-text);
-	position: absolute;
-	top: 50%;
-	left: calc(1rem + 2vw);
-	transform: translate(-50%, -50%) rotate(-90deg);
-	z-index: 1;
-	text-decoration: none;
 }
 
 .work.click {

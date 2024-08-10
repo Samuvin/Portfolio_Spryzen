@@ -1,3 +1,6 @@
+.Intro_Text {
+	color: var(--intro-color);
+}
 @media only screen and (max-width: 1200px) {
 	.box {
 		width: 65vw;
@@ -122,7 +125,6 @@
 
 .text {
 	font-size: calc(1rem + 1.5vw);
-	color: var(--black-color);
 	padding: 2rem;
 	cursor: pointer;
 	display: flex;

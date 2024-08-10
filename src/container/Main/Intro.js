@@ -27,9 +27,11 @@ const Intro = () => {
 					initial={{ opacity: 0 }}
 					animate={{ opacity: 1 }}
 					transition={{ duration: 1, delay: 2 }}>
-					<h1>Hi,</h1>
-					<h3>I'm CodeBucks.</h3>
-					<h6>I design and Code simple yet beautiful websites.</h6>
+					<h1 className="Intro_Text">Hi,</h1>
+					<h3 className="Intro_Text">I'm CodeBucks.</h3>
+					<h4 className="Intro_Text">
+						I design and Code simple yet beautiful websites.
+					</h4>
 				</motion.div>
 			</div>
 			<div className="sub-box">

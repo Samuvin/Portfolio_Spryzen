@@ -47,7 +47,7 @@
 	/*========== Colors ==========*/
 	/* Change favorite color */
 	--hue-color: 240; /* Adjusted to match the new color palette */
-
+	--intro-color: black;
 	/* HSL color mode */
 	--first-color: hsl(240, 40%, 84%); /* Approximate HSL for #CBCCE9 */
 	--first-color-second: hsl(240, 40%, 84%);
@@ -95,6 +95,11 @@
 	--z-modal: 1000;
 }
 
+@media only screen and (max-width: 50em) {
+	:root {
+		--intro-color: white;
+	}
+}
 /* Font size for large devices */
 @media screen and (min-width: 968px) {
 	:root {
@@ -149,6 +154,9 @@ body.dark-theme {
 		50,
 		0.8
 	); /* Same as base color for consistency */
+
+	--intro-color: #fff;
+
 	--black-color: rgba(255, 255, 255, 1);
 	--first-color-alt: rgba(21, 22, 50, 0.7); /* Slightly lighter */
 	--first-color-lighter: rgba(21, 22, 50, 0.5); /* More transparent */
