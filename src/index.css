@@ -23,12 +23,12 @@
 /*==================== VARIABLES CSS ====================*/
 :root {
 	--theme-body: #fff;
-	--Block_First: #5658a7;
-	--Block_Second: #7c7dc6;
-	--Block_Third: #252555;
+	--Block_First: #151632;
+	--Block_Second: #fff;
+	--Block_Third: #7c7dc6;
 
 	--nav-icon: black;
-	--nav-icon-active: #313bac;
+	--nav-icon-active: ;
 	--nav-icon-hover: #6b6cbf;
 
 	--logo-color: black;
@@ -120,9 +120,9 @@
 /*========== Variables Dark theme ==========*/
 body.dark-theme {
 	--theme-body: var(--glossy-background);
-	--Block_First: #895bb8;
-	--Block_Second: #65439d;
-	--Block_Third: #413479;
+	--Block_First: #43459d;
+	--Block_Second: rgba(255, 255, 255, 0.9);
+	--Block_Third: #6b6cbf;
 
 	--intro-border: #43459d;
 	--line-color-nav: white;
