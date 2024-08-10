@@ -27,6 +27,10 @@
 	--Block_Second: #7c7dc6;
 	--Block_Third: #252555;
 
+	--nav-icon: black;
+	--nav-icon-active: #313bac;
+	--nav-icon-hover: #6b6cbf;
+
 	--logo-color: black;
 	--intro-border: #151632;
 	--header-height: 3rem;
@@ -269,9 +273,12 @@ body {
 	color: var(--text-color);
 }
 
-h1,
-h2,
 h3,
+h2 {
+	font-weight: var(--font-semi-bold);
+}
+
+h1,
 h4 {
 	color: var(--title-color);
 	font-weight: var(--font-semi-bold);

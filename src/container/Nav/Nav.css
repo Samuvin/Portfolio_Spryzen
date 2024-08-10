@@ -111,12 +111,13 @@ a.nav__logo {
 	flex-direction: column;
 	align-items: center;
 	font-size: var(--small-font-size);
-	color: var(--title-color);
+	color: var(--nav-icon);
+
 	font-weight: var(--font-medium);
 }
 
 .nav__link:hover {
-	color: var(--first-color-alt);
+	color: var(--nav-icon-hover);
 }
 
 .nav__icon {
@@ -142,7 +143,7 @@ a.nav__logo {
 
 /* Active link */
 .active-link {
-	color: var(--first-color-alt);
+	color: var(--nav-icon-active);
 }
 
 /* Change background header */

@@ -3,9 +3,10 @@
 	top: 2rem;
 	left: 2rem;
 	z-index: 3;
-	color: var(--title-color);
+	color: var(--intro-color);
 	cursor: pointer;
 	transition: color 0.3s;
+	font-family: "Times New Roman", Times, serif;
 }
 
 .logo:hover {
