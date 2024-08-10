@@ -3,7 +3,7 @@ import { AiFillEye, AiFillGithub } from "react-icons/ai";
 import { motion } from "framer-motion";
 import { AppWrap, MotionWrap } from "../../wrapper";
 import about01 from "../../assets/about01.png";
-import "./Work.scss";
+import "./Work.css";
 
 // Define a local array to replace the backend data
 const works = [
