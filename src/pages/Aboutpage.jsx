@@ -7,6 +7,7 @@ const AboutPage = () => {
 	return (
 		<>
 			<TransitionEffect />
+
 			<About />
 			<Works />
 			<Testimonial />

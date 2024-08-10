@@ -23,8 +23,62 @@
 }
 
 /* Media Queries */
-@media (max-width: var(--breakpoint-sm)) {
+@media (max-width: 1024px) {
+	.icons {
+		left: 1.5rem;
+	}
+
+	.Social_Icons > svg {
+		width: 22px;
+		height: 22px;
+	}
+
+	.line {
+		height: 6rem;
+	}
+}
+
+@media (max-width: 768px) {
 	.icons {
 		left: 1rem;
+	}
+
+	.Social_Icons > svg {
+		width: 20px;
+		height: 20px;
+	}
+
+	.line {
+		height: 5rem;
+	}
+}
+
+@media (max-width: 480px) {
+	.icons {
+		left: 0.5rem;
+	}
+
+	.Social_Icons > svg {
+		width: 18px;
+		height: 18px;
+	}
+
+	.line {
+		height: 4rem;
+	}
+}
+
+@media (max-width: 320px) {
+	.icons {
+		left: 0.25rem;
+	}
+
+	.Social_Icons > svg {
+		width: 16px;
+		height: 16px;
+	}
+
+	.line {
+		height: 3rem;
 	}
 }

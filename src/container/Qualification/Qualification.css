@@ -16,6 +16,13 @@
 }
 
 @media (max-width: 480px) {
+	.vertical-timeline {
+		padding-top: 5px;
+		padding-left: 3rem; /* Add space on the left for smaller mobile devices */
+	}
+}
+
+@media (max-width: 480px) {
 	.Project_Container {
 		padding-top: 5px;
 	}
@@ -23,7 +30,7 @@
 
 /* Timeline heading styling */
 .timeline-heading {
-	margin-top: 20px;
+	margin-top: 3rem;
 	font-size: 2.5em;
 	text-align: center;
 	color: var(--black-color);

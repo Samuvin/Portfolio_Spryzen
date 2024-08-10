@@ -45,12 +45,13 @@
 /*==================== NAV ====================*/
 .nav {
 	background-color: var(--body-color);
+	background: rgba(255, 255, 255, 0.25);
 	max-width: 968px;
 	height: var(--header-height);
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	margin: 0 auto; /* Center the navbar horizontally */
+	margin: 0 auto;
 	padding: 0 1rem; /* Add padding on left and right inside the navbar */
 
 	border-radius: 1rem 1rem 0 0; /* Rounded top corners */
