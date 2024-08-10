@@ -23,8 +23,8 @@
 /*==================== VARIABLES CSS ====================*/
 :root {
 	--header-height: 3rem;
-
-	--primary-color: #edf2f8;
+	--Achievement-Container-Buttons: #313bac;
+	--primary-color: #cbcce9;
 	--secondary-color: #313bac;
 	--black-color: #030303;
 	--lightGray-color: #e4e4e4;
@@ -34,21 +34,22 @@
 
 	/*========== Colors ==========*/
 	/* Change favorite color */
-	--hue-color: 240; /*Purple 250 - Green 142 - Blue 230 - Pink 340*/
+	--hue-color: 240; /* Adjusted to match the new color palette */
 
 	/* HSL color mode */
-	--first-color: hsl(var(--hue-color), 69%, 61%);
-	--first-color-second: hsl(var(--hue-color), 69%, 61%);
-	--first-color-alt: hsl(var(--hue-color), 57%, 53%);
-	--first-color-lighter: hsl(var(--hue-color), 92%, 85%);
-	--title-color: hsl(var(--hue-color), 8%, 15%);
-	--text-color: hsl(var(--hue-color), 8%, 45%);
-	--text-color-light: hsl(var(--hue-color), 8%, 65%);
-	--input-color: hsl(var(--hue-color), 70%, 96%);
-	--body-color: hsl(var(--hue-color), 60%, 99%);
-	--container-color: #fff;
-	--scroll-bar-color: hsl(var(--hue-color), 12%, 90%);
-	--scroll-thumb-color: hsl(var(--hue-color), 12%, 80%);
+	--first-color: hsl(240, 40%, 84%); /* Approximate HSL for #CBCCE9 */
+	--first-color-second: hsl(240, 40%, 84%);
+	--first-color-alt: hsl(240, 35%, 74%);
+	--first-color-lighter: hsl(240, 50%, 94%);
+	--title-color: hsl(240, 8%, 15%);
+	--text-color: hsl(240, 8%, 45%);
+	--text-color-light: hsl(240, 8%, 65%);
+	--input-color: hsl(240, 50%, 96%);
+	--body-color: hsl(240, 50%, 99%);
+	--container-color: #ffffff;
+	--scroll-bar-color: hsl(240, 12%, 90%);
+	--scroll-thumb-color: hsl(240, 12%, 80%);
+
 	/*========== Font and typography ==========*/
 	--body-font: "Poppins", sans-serif;
 
@@ -97,17 +98,112 @@
 
 /*========== Variables Dark theme ==========*/
 body.dark-theme {
-	/* HSL color mode */
-	--first-color-second: hsl(var(--hue-color), 30%, 8%);
+	--Achievement-Container: #343579;
+	--Achievement-Container-Buttons: #343579;
 
-	--title-color: hsl(var(--hue-color), 8%, 95%);
-	--text-color: hsl(var(--hue-color), 8%, 75%);
+	--primary-color: rgba(255, 255, 255, 0.9); /* Whitish glowing */
+	--secondary-color: #6b6cbf; /* Slightly dimmed white */
+	--black-color: white;
+	--lightGray-color: rgba(255, 255, 255, 0.6); /* Light, glowing gray */
+	--gray-color: white; /* Dimmer glowing gray */
+	--brown-color: rgba(255, 255, 255, 0.3); /* Soft, glowing brown */
+	--white-color: #ffffff; /* Pure white */
 
-	--input-color: hsl(var(--hue-color), 29%, 16%);
-	--body-color: hsl(var(--hue-color), 28%, 16%);
-	--container-color: hsl(var(--hue-color), 29%, 16%);
-	--scroll-bar-color: hsl(var(--hue-color), 12%, 48%);
-	--scroll-thumb-color: hsl(var(--hue-color), 12%, 36%);
+	/* Background and text colors */
+	background-color: #151632; /* Deep blue-gray background */
+	color: #fff; /* White text color */
+
+	/* Glossy Gradient Background */
+	--glossy-background: linear-gradient(145deg, #151632, #2a2b59);
+
+	/* HSL color mode adjustments */
+	--first-color: rgba(21, 22, 50, 0.8); /* Dark base color */
+	--first-color-second: rgba(
+		21,
+		22,
+		50,
+		0.8
+	); /* Same as base color for consistency */
+	--black-color: rgba(255, 255, 255, 1);
+	--first-color-alt: rgba(21, 22, 50, 0.7); /* Slightly lighter */
+	--first-color-lighter: rgba(21, 22, 50, 0.5); /* More transparent */
+	--title-color: rgba(255, 255, 255, 0.9); /* Pure white for titles */
+	--text-color: rgba(255, 255, 255, 0.9); /* White with slight transparency */
+	--text-color-light: rgba(255, 255, 255, 0.7); /* Lighter white */
+	--input-color: rgba(255, 255, 255, 0.4); /* More transparent */
+	--body-color: var(--glossy-background); /* Glossy gradient background */
+	--container-color: rgba(
+		21,
+		22,
+		50,
+		0.85
+	); /* Slightly transparent deep blue-gray with some gloss */
+
+	/* Apply a subtle shadow for depth */
+
+	/* Add a glossy highlight at the top */
+	background-image: linear-gradient(
+		to bottom,
+		rgba(255, 255, 255, 0.1),
+		rgba(21, 22, 50, 0)
+	);
+
+	/* Give the container a subtle inner glow */
+	--container-glow: inset 0px 0px 15px rgba(255, 255, 255, 0.2);
+}
+
+/* Applying the gradient background feel to the entire body */
+body.dark-theme {
+	background: var(--glossy-background);
+}
+
+/* Applying the gradient feel to specific containers */
+
+/* Apply the inner glow effect to specific elements, such as a container */
+
+/* Adjust the scrollbar appearance */
+::-webkit-scrollbar {
+	width: 12px;
+}
+
+::-webkit-scrollbar-track {
+	background: var(--scroll-bar-color);
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: var(--scroll-thumb-color);
+	border-radius: 20px;
+	/* Black border to enhance glossy feel */
+}
+
+/* Add a glossy border to buttons or interactive elements */
+button,
+input[type="submit"] {
+	background: var(--container-color);
+	border: 2px solid rgba(255, 255, 255, 0.2);
+	border-radius: 5px;
+	color: var(--text-color);
+	padding: 0.5rem 1rem;
+	cursor: pointer;
+	box-shadow: inset 0px 4px 10px rgba(255, 255, 255, 0.1),
+		0px 4px 10px rgba(0, 0, 0, 0.5);
+	transition: background 0.3s ease;
+}
+
+button:hover,
+input[type="submit"]:hover {
+	background: var(--first-color-alt);
+}
+
+input[type="text"],
+textarea {
+	background: rgba(0, 0, 0, 0.3);
+	border: 2px solid rgba(255, 255, 255, 0.2);
+	border-radius: 5px;
+	color: var(--text-color-light);
+	padding: 0.5rem;
+	box-shadow: inset 0px 4px 10px rgba(255, 255, 255, 0.1),
+		0px 4px 10px rgba(0, 0, 0, 0.5);
 }
 
 /*========== Button Dark/Light ==========*/

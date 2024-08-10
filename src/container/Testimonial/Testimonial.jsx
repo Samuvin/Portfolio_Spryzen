@@ -3,8 +3,8 @@ import { HiChevronLeft, HiChevronRight } from "react-icons/hi";
 import { motion } from "framer-motion";
 
 import { AppWrap, MotionWrap } from "../../wrapper";
-import "./Testimonial.scss";
 import sass from "../../assets/sass.png"; // Replace this with actual image imports
+import "./Testimonial.css";
 
 const testimonialsData = [
 	{
