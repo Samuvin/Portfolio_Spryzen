@@ -94,7 +94,7 @@
 }
 
 .app__footer-form {
-	width: 100%;
+	width: 95%;
 	max-width: 800px;
 	flex-direction: column;
 	margin: 1rem 2rem;
@@ -171,7 +171,7 @@
 
 @media screen and (max-width: 768px) {
 	.app__footer-form {
-		width: 100%;
+		width: 95%;
 		margin: 1rem 0;
 	}
 }
