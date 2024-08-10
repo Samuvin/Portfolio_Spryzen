@@ -29,7 +29,7 @@
 	--logo-color: black;
 	--intro-border: #151632;
 	--header-height: 3rem;
-	--line-color: black;
+	--line-color-nav: black;
 	--Achievement-Container-Buttons: #313bac;
 	--Project-title: #6b6cbf;
 	--Project-content: #151632;
@@ -114,7 +114,7 @@ body.dark-theme {
 	--Block_Third: #413479;
 
 	--intro-border: #43459d;
-	--line-color: white;
+	--line-color-nav: white;
 	--logo-color: white;
 	--Achievement-Container: #343579;
 	--Achievement-Container-Buttons: #343579;

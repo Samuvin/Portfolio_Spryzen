@@ -9,7 +9,7 @@
 }
 
 .Social_Icons {
-	color: var(--line-color);
+	color: var(--line-color-nav) !important;
 }
 
 .icons > *:not(:last-child) {
@@ -19,7 +19,7 @@
 .line {
 	width: 2px;
 	height: 8rem;
-	background-color: var(--line-color);
+	background-color: var(--line-color-nav) !important;
 }
 
 /* Media Queries */
