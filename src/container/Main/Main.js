@@ -3,7 +3,7 @@ import { NavLink, Route, Routes } from "react-router-dom";
 import { motion } from "framer-motion";
 import Intro from "./Intro";
 import Loading from "./Loading";
-import "./Main.scss";
+import "./Main.css";
 import AboutPage from "../../pages/Aboutpage";
 import Projectspage from "../../pages/Projectspage";
 import Skillspage from "../../pages/Skillspage";

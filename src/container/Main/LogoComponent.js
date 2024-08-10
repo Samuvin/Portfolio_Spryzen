@@ -1,26 +1,14 @@
-import styled from "styled-components";
-import { DarkTheme, mediaQueries } from "./Themes";
-
-const Logo = styled.h1`
-	display: inline-block;
-	color: ${(props) =>
-		props.color === "dark" ? DarkTheme.text : DarkTheme.body};
-	font-family: "Pacifico", cursive;
-	position: fixed;
-	left: 2rem;
-	top: 2rem;
-
-	z-index: 3;
-
-	${mediaQueries(40)`
-      font-size:1.5em;
-      left:1rem;
-      top:2rem;
-  `};
-`;
+import React from "react";
+import "./Logo.css";
 
 const LogoComponent = (props) => {
-	return <Logo color={props.theme}>SJ</Logo>;
+	const theme = props.theme === "dark" ? "dark" : "light";
+
+	return (
+		<h1 className="logo" data-theme={theme}>
+			SJ
+		</h1>
+	);
 };
 
 export default LogoComponent;

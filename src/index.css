@@ -1,5 +1,5 @@
-/* @import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap");
+/*
 :root {
 	--font-base: "DM Sans", sans-serif;
 
@@ -13,7 +13,7 @@
 }
 */
 /*==================== GOOGLE FONTS ====================*/
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"); */
 * {
 	box-sizing: border-box;
 	padding: 0;
@@ -22,7 +22,9 @@
 }
 /*==================== VARIABLES CSS ====================*/
 :root {
+	--logo-color: black;
 	--header-height: 3rem;
+	--line-color: black;
 	--Achievement-Container-Buttons: #313bac;
 	--Project-title: #6b6cbf;
 	--Project-content: #151632;
@@ -30,7 +32,7 @@
 	--Contact-Form: #fff;
 	--primary-color: #cbcce9;
 	--secondary-color: #313bac;
-	--black-color: #030303;
+	--black-color: #151632;
 	--lightGray-color: #e4e4e4;
 	--gray-color: #6b7688;
 	--brown-color: #46364a;
@@ -102,6 +104,8 @@
 
 /*========== Variables Dark theme ==========*/
 body.dark-theme {
+	--line-color: white;
+	--logo-color: white;
 	--Achievement-Container: #343579;
 	--Achievement-Container-Buttons: #343579;
 	--certificate-container: #343579;
@@ -166,10 +170,6 @@ body.dark-theme {
 	background: var(--glossy-background);
 }
 
-/* Applying the gradient feel to specific containers */
-
-/* Apply the inner glow effect to specific elements, such as a container */
-
 /* Adjust the scrollbar appearance */
 ::-webkit-scrollbar {
 	width: 12px;
@@ -182,7 +182,6 @@ body.dark-theme {
 ::-webkit-scrollbar-thumb {
 	background-color: var(--scroll-thumb-color);
 	border-radius: 20px;
-	/* Black border to enhance glossy feel */
 }
 
 /* Add a glossy border to buttons or interactive elements */
