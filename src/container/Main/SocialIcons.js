@@ -8,7 +8,7 @@ import { TfiTwitterAlt } from "react-icons/tfi";
 
 import "./SocialIcons.css";
 
-const SocialIcons = (props) => {
+const SocialIcons = () => {
 	return (
 		<div className="icons">
 			<motion.div

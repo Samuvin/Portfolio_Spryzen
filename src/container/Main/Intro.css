@@ -59,15 +59,16 @@
 	display: flex;
 	background: linear-gradient(
 				to right,
-				var(--body-color) 50%,
-				var(--text-color) 50%
+				var(--intro-border) 50%,
+				/* Use the variable */ var(--intro-border) 50%
 			)
 			bottom,
-		linear-gradient(to right, var(--body-color) 50%, var(--text-color) 50%) top;
+		linear-gradient(to right, var(--intro-border) 50%, var(--intro-border) 50%)
+			top;
 	background-repeat: no-repeat;
 	background-size: 100% 2px;
-	border-left: 2px solid var(--body-color);
-	border-right: 2px solid var(--text-color);
+	border-left: 2px solid var(--intro-border); /* Use the variable */
+	border-right: 2px solid var(--intro-border); /* Use the variable */
 	z-index: 1;
 	position: absolute;
 	left: 50%;
@@ -121,7 +122,7 @@
 
 .text {
 	font-size: calc(1rem + 1.5vw);
-	color: var(--body-color);
+	color: var(--black-color);
 	padding: 2rem;
 	cursor: pointer;
 	display: flex;

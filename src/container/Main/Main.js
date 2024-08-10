@@ -8,7 +8,6 @@ import AboutPage from "../../pages/Aboutpage";
 import Projectspage from "../../pages/Projectspage";
 import Skillspage from "../../pages/Skillspage";
 import Footer from "../footer/Footer";
-import { images } from "../../constants";
 import TransitionEffect from "../../Components/TransitionEffect";
 
 const SocialIcons = lazy(() => import("./SocialIcons"));
@@ -62,11 +61,7 @@ const Main = () => {
 				<div className="container">
 					<LogoComponent theme={click ? "dark" : "dark"} />
 
-					{mq ? (
-						<SocialIcons theme="dark" />
-					) : (
-						<SocialIcons theme={click ? "dark" : "dark"} />
-					)}
+					{mq ? <SocialIcons /> : <SocialIcons />}
 					<a
 						className={`contact ${click ? "click" : ""}`}
 						target="_blank"

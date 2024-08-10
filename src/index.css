@@ -23,6 +23,7 @@
 /*==================== VARIABLES CSS ====================*/
 :root {
 	--logo-color: black;
+	--intro-border: #151632;
 	--header-height: 3rem;
 	--line-color: black;
 	--Achievement-Container-Buttons: #313bac;
@@ -104,6 +105,7 @@
 
 /*========== Variables Dark theme ==========*/
 body.dark-theme {
+	--intro-border: #43459d;
 	--line-color: white;
 	--logo-color: white;
 	--Achievement-Container: #343579;
