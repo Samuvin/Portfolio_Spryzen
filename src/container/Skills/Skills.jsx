@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Tooltip as ReactTooltip } from "react-tooltip";
 import { AppWrap, MotionWrap } from "../../wrapper";
-import "./Skills.scss";
+import "./Skills.css";
 import TransitionEffect from "../../Components/TransitionEffect";
 import node from "../../assets/node.png";
 // Sample data for skills and experiences
@@ -48,7 +48,7 @@ const Skills = () => {
 	return (
 		<>
 			<TransitionEffect />
-			<h2 className="head-text">Skills & Experiences</h2>
+			<h2 className="head-text">Skills & Education</h2>
 
 			<div className="app__skills-container">
 				<motion.div className="app__skills-list">
@@ -108,8 +108,4 @@ const Skills = () => {
 	);
 };
 
-export default AppWrap(
-	MotionWrap(Skills, "app__skills app__flex"),
-	"skills",
-	"app__whitebg"
-);
+export default AppWrap(MotionWrap(Skills, "app__skills"), "skills");

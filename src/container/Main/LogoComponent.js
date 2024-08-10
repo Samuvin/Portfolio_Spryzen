@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./Logo.css";
+import image from "./bot.png";
 
 const LogoComponent = () => {
 	const [isDarkTheme, setIsDarkTheme] = useState(false);
@@ -21,9 +22,11 @@ const LogoComponent = () => {
 		}
 	};
 	return (
-		<h1 className="logo" onClick={changeTheme}>
-			SJ
-		</h1>
+		<div>
+			<h1 className="logo" onClick={changeTheme}>
+				SJ
+			</h1>
+		</div>
 	);
 };
 

@@ -1,6 +1,5 @@
 import React from "react";
 import { motion } from "framer-motion";
-import TransitionEffect from "../Components/TransitionEffect";
 
 const MotionWrap = (Component, classNames) =>
 	function HOC() {

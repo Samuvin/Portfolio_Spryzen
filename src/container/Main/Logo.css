@@ -1,18 +1,36 @@
 .logo {
-	display: inline-block;
-	font-family: "Pacifico", cursive;
 	position: fixed;
-	left: 2rem;
 	top: 2rem;
+	left: 2rem;
 	z-index: 3;
 	color: var(--logo-color);
 	cursor: pointer;
+	transition: color 0.3s;
+}
+
+.logo:hover {
+	color: #7e7fc8; /* Color on hover */
+}
+
+/* Style for the image container */
+.image-container {
+	position: fixed;
+	top: 0.5rem; /* Align with logo if desired */
+	left: 2rem; /* Adjust this to position next to the logo */
+}
+
+.image-container img {
+	width: 200px; /* Adjust width as needed */
+	height: auto; /* Maintains aspect ratio */
 }
 
 @media (max-width: 40em) {
 	.logo {
 		font-size: 1.5em;
-		left: 1rem;
-		top: 2rem;
+		left: 1rem; /* Adjust left position for smaller screens */
+	}
+
+	.image-container {
+		left: 4rem; /* Adjust image position for smaller screens */
 	}
 }
