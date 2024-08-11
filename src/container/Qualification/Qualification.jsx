@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import "./Qualification.css";
 import { LiaAtomSolid } from "react-icons/lia";
 import {
@@ -7,6 +7,7 @@ import {
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 import { AppWrap, MotionWrap } from "../../wrapper";
+import { motion, useInView, useAnimation } from "framer-motion";
 
 const WorkIcon = () => (
 	<div
@@ -41,6 +42,29 @@ const TimelineElement = ({
 	icon,
 	position,
 }) => {
+	// Ref for the element
+	const ref = useRef(null);
+	// Animation controls
+	const controls = useAnimation();
+	// Check if the element is in view with a threshold of 50%
+	const inView = useInView(ref, { triggerOnce: false, threshold: 0.5 });
+
+	// Slide up and out variants for content
+	const slideUpContentVariants = {
+		initial: { opacity: 0, y: "100%" }, // Start below the container
+		animate: { opacity: 1, y: 0 }, // Move to the center of the container
+		exit: { opacity: 0, y: "-100%" }, // Move above the container when exiting
+	};
+
+	// Update animation based on inView
+	useEffect(() => {
+		if (inView) {
+			controls.start("animate");
+		} else {
+			controls.start("exit");
+		}
+	}, [inView, controls]);
+
 	return (
 		<VerticalTimelineElement
 			position={position}
@@ -48,12 +72,20 @@ const TimelineElement = ({
 			date={date}
 			iconStyle={fix}
 			icon={icon}>
-			<div className="timeline-content-container">
-				<div className="timeline-inner-content">
+			<div
+				className="timeline-content-container"
+				style={{ overflow: "hidden" }}>
+				<motion.div
+					ref={ref}
+					className="timeline-inner-content"
+					variants={slideUpContentVariants} // Apply the defined animation variants to the content
+					initial="initial"
+					animate={controls} // Control animation based on view state
+					transition={{ duration: 0.5, ease: "easeOut" }}>
 					<h3 className="vertical-timeline-element-title">{title}</h3>
 					<h4 className="vertical-timeline-element-subtitle">{subtitle}</h4>
 					<p className="Element-content">{content}</p>
-				</div>
+				</motion.div>
 			</div>
 		</VerticalTimelineElement>
 	);

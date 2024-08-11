@@ -32,51 +32,51 @@
 
 /* Vertical timeline line styling */
 .vertical-timeline::before {
-	background: linear-gradient(
-		to bottom,
-		#ff6f61,
-		#d84315
-	); /* Gradient effect */
-	width: 4px; /* Line thickness */
-	border-radius: 2px; /* Rounded corners */
-	box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* Shadow effect */
-	position: absolute; /* Positioned relative to the timeline container */
-	left: 50%; /* Centered horizontally */
-	transform: translateX(-50%); /* Centered properly */
-	transition: transform 0.2s ease-out; /* Smooth transition for movement */
+	background: linear-gradient(to bottom, #ff6f61, #d84315);
+	width: 4px;
+	border-radius: 2px;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	transition: transform 0.2s ease-out;
 }
 
 /* Vertical timeline element styling */
 .vertical-timeline-element::before {
-	background: rgb(33, 150, 243); /* Line color */
-	width: 4px; /* Line thickness */
-	border-radius: 2px; /* Optional: makes the line rounded */
+	background: rgb(33, 150, 243);
+	width: 4px;
+	border-radius: 2px;
 }
 
 /* Circle icon styling */
 .vertical-timeline-element-icon {
-	background: rgb(33, 150, 243); /* Circle color */
-	color: #fff; /* Icon color */
-	border: 2px solid #fff; /* Optional: adds a border around the circle */
-	border-radius: 50%; /* Makes it a circle */
-	width: 50px; /* Increased circle size */
-	height: 50px; /* Increased circle size */
-	display: flex; /* Centering icon inside the circle */
-	align-items: center; /* Centering icon vertically */
-	justify-content: center; /* Centering icon horizontally */
-	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: adds shadow to the circle */
-	position: relative; /* For rotation animation */
-	overflow: hidden; /* Ensure that icon doesn't overflow the circle */
+	background: rgb(33, 150, 243);
+	color: #fff;
+	border: 2px solid #fff;
+	border-radius: 50%;
+	width: 50px;
+	height: 50px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+	position: relative;
+	overflow: hidden;
+	transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.vertical-timeline-element-icon:hover {
+	transform: scale(1.1);
+	box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
 .vertical-timeline-element-title {
-	color: var(--Project-title); /* Change this to your desired title color */
+	color: var(--Project-title);
 }
 
 .vertical-timeline-element-subtitle {
-	color: var(
-		--Project-Subtitle
-	); /* Change this to your desired subtitle color */
+	color: var(--Project-Subtitle);
 }
 
 .Element-content {
@@ -100,6 +100,7 @@
 	margin-left: -12px;
 	margin-top: -12px;
 }
+
 /* Animation for rotating icon */
 .vertical-timeline-element-icon.motion {
 	animation: rotate 2s linear infinite;
@@ -115,18 +116,90 @@
 }
 
 /* Timeline content container styling */
+/* Timeline content container styling */
 .timeline-content-container {
 	padding: 20px;
-	background: rgba(255, 255, 255, 0.9); /* Slightly translucent background */
+	background: rgba(255, 255, 255, 0.9);
 	border-radius: 8px;
-	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for effect */
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Box shadow effect similar to the icon */
+	transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Hover effect for the timeline content */
+.timeline-content-container:hover {
+	transform: scale(1.05); /* Slight scale on hover */
+	box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Deeper shadow on hover */
 }
 
 /* Inner content styling */
 .timeline-inner-content {
 	padding: 15px;
 	border-radius: 4px;
-	background: #fff; /* Solid background for inner content */
+	background: #fff;
+}
+
+/* Fade-in animation for timeline elements */
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+		transform: translateY(20px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.vertical-timeline-element {
+	opacity: 0;
+	animation: fadeIn 0.6s ease-in forwards;
+}
+
+.vertical-timeline-element--work {
+	animation-delay: 0.3s;
+}
+
+.vertical-timeline-element--work:nth-child(2) {
+	animation-delay: 0.5s;
+}
+
+.vertical-timeline-element--work:nth-child(3) {
+	animation-delay: 0.7s;
+}
+
+.vertical-timeline-element--work:nth-child(4) {
+	animation-delay: 0.9s;
+}
+
+/* Slide-in animations based on position */
+@keyframes slideInLeft {
+	from {
+		opacity: 0;
+		transform: translateX(-100px);
+	}
+	to {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+@keyframes slideInRight {
+	from {
+		opacity: 0;
+		transform: translateX(100px);
+	}
+	to {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+.vertical-timeline-element--left {
+	animation: slideInLeft 0.6s ease-out forwards;
+}
+
+.vertical-timeline-element--right {
+	animation: slideInRight 0.6s ease-out forwards;
 }
 
 /* Height for the empty div (debugging purpose) */
