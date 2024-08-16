@@ -1,0 +1,217 @@
+/* General Container Styling */
+.about-container {
+	overflow-x: hidden;
+	padding: 2rem;
+	color: var(--black-color);
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+/* Background Text Styling */
+.about-container::before {
+	content: "ABOUT";
+	position: fixed;
+	top: 2rem;
+	left: 2rem;
+	transform: none;
+	font-size: 12rem;
+	font-weight: 800;
+	color: var(--fade-color);
+	letter-spacing: 1rem;
+	z-index: -1;
+	pointer-events: none;
+	white-space: nowrap;
+	user-select: none;
+}
+
+/* Adjust grid-container to be above the background text */
+.grid-container {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	align-items: center;
+	justify-items: center;
+	gap: 2rem;
+	width: 100%;
+}
+
+/* Biography Section Styling */
+.biography-section {
+	grid-column: 1 / 2;
+	padding: 1rem;
+	background: none;
+	max-width: 400px;
+	color: var(--subtitle-color); /* Change text color */
+	font-size: 1rem;
+	margin-left: 1rem;
+}
+
+/* Image Section Styling */
+.image-section {
+	grid-column: 2 / 3;
+	position: relative;
+	padding: 1rem;
+	background: #fff;
+	box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px,
+		rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px,
+		rgba(240, 46, 170, 0.05) 25px 25px;
+	border: 4px solid #591da9;
+	overflow: hidden;
+	transform-style: preserve-3d;
+	perspective: 1000px;
+	transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+	max-width: 100%;
+}
+
+.image-section:hover {
+	background: linear-gradient(135deg, #591da9, #bb86fc);
+	box-shadow: rgba(240, 46, 170, 0.4) 8px 8px, rgba(240, 46, 170, 0.3) 16px 16px,
+		rgba(240, 46, 170, 0.2) 24px 24px, rgba(240, 46, 170, 0.1) 32px 32px,
+		rgba(240, 46, 170, 0.05) 40px 40px; /* Increased box-shadow size */
+	transform: rotateY(10deg) rotateX(5deg);
+}
+
+.profile-image {
+	width: 100%;
+	height: auto;
+	object-fit: cover;
+	border-radius: 0;
+}
+
+.image-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(0, 0, 0, 0.3);
+	opacity: 0;
+	transition: opacity 0.3s ease;
+}
+
+.image-section:hover .image-overlay {
+	opacity: 1;
+}
+
+.overlay-text {
+	color: #fff;
+	font-size: 1.5rem;
+	font-weight: bold;
+	text-align: center;
+	line-height: 100%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+/* Stats Section Styling */
+.stats-section {
+	grid-column: 3 / 4;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	text-align: center;
+	gap: 2rem;
+	color: #bb86fc; /* Change text color */
+}
+
+.stats-item {
+	margin-bottom: 2rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.stat-number {
+	display: inline-block;
+	font-size: 3rem;
+	font-weight: 700;
+	color: #bb86fc;
+	margin-bottom: 0.5rem;
+	transition: transform 0.3s ease-in-out, color 0.3s ease;
+}
+
+.stat-title {
+	font-size: 1.25rem;
+	font-weight: 500;
+	color: var(--subtitle-color);
+	text-transform: capitalize;
+	text-align: center;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1200px) {
+	.grid-container {
+		gap: 1rem;
+	}
+
+	.bio-heading {
+		font-size: 1.5rem;
+	}
+
+	.stat-number {
+		font-size: 2.5rem;
+	}
+
+	.stat-title {
+		font-size: 1rem;
+	}
+
+	.about-container::before {
+		font-size: 10rem;
+		letter-spacing: 0.8rem;
+		top: 1rem;
+		left: 1rem;
+	}
+}
+
+@media (max-width: 768px) {
+	.grid-container {
+		grid-template-columns: 1fr;
+		gap: 1rem;
+	}
+
+	.biography-section,
+	.image-section,
+	.stats-section {
+		grid-column: span 1;
+		text-align: center;
+		max-width: 100%;
+	}
+
+	.stats-section {
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+	.stats-item {
+		margin-bottom: 1rem;
+		margin-right: 1rem;
+		flex-direction: row;
+		align-items: baseline;
+	}
+
+	.stat-number {
+		font-size: 2rem;
+	}
+
+	.stat-title {
+		font-size: 0.875rem;
+		margin-left: 0.5rem;
+	}
+
+	.image-section {
+		max-width: 200px;
+	}
+
+	.about-container::before {
+		font-size: 8rem;
+		letter-spacing: 0.5rem;
+		top: 1rem;
+		left: 1rem;
+	}
+}

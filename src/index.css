@@ -22,6 +22,9 @@
 }
 /*==================== VARIABLES CSS ====================*/
 :root {
+	--fade-color: rgba(0, 0, 0, 0.05);
+	--subtitle-color: #151632;
+
 	--theme-body: #fff;
 	--Block_First: #151632;
 	--Block_Second: #fff;
@@ -35,6 +38,7 @@
 	--intro-border: #151632;
 	--header-height: 3rem;
 	--line-color-nav: black;
+	--Achievement-Container: #;
 	--Achievement-Container-Buttons: #313bac;
 	--Project-title: #6b6cbf;
 	--Project-content: #151632;
@@ -119,6 +123,8 @@
 
 /*========== Variables Dark theme ==========*/
 body.dark-theme {
+	--subtitle-color: rgba(255, 255, 255, 0.9);
+	--fade-color: rgba(107, 108, 191, 0.4);
 	--theme-body: var(--glossy-background);
 	--Block_First: #43459d;
 	--Block_Second: rgba(255, 255, 255, 0.9);
