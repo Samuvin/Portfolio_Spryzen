@@ -22,6 +22,10 @@
 }
 /*==================== VARIABLES CSS ====================*/
 :root {
+	--particle-background-color: #0d47a1; /* Background color */
+	--particle-color: #ffffff; /* Particle color */
+	--particle-link-color: #ffffff; /* Link color */
+
 	--fade-color: rgba(0, 0, 0, 0.05);
 	--subtitle-color: #151632;
 

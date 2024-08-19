@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import "./Logo.css";
-import image from "./bot.png";
 
 const LogoComponent = () => {
 	const [isDarkTheme, setIsDarkTheme] = useState(false);
+
 	useEffect(() => {
 		const savedTheme = localStorage.getItem("theme");
 		if (savedTheme === "dark") {
@@ -11,16 +11,20 @@ const LogoComponent = () => {
 			setIsDarkTheme(true);
 		}
 	}, []);
+
 	const changeTheme = () => {
-		setIsDarkTheme(!isDarkTheme);
-		if (!isDarkTheme) {
-			document.body.classList.add("dark-theme");
-			localStorage.setItem("theme", "dark");
-		} else {
+		if (isDarkTheme) {
 			document.body.classList.remove("dark-theme");
 			localStorage.setItem("theme", "light");
+		} else {
+			document.body.classList.add("dark-theme");
+			localStorage.setItem("theme", "dark");
 		}
+
+		// Toggle the theme state
+		setIsDarkTheme(!isDarkTheme);
 	};
+
 	return (
 		<div>
 			<h1 className="logo" onClick={changeTheme}>

@@ -9,25 +9,13 @@ import Projectspage from "../../pages/Projectspage";
 import Skillspage from "../../pages/Skillspage";
 import Footer from "../footer/Footer";
 import TransitionEffect from "../../Components/TransitionEffect";
-
+import ParticleComponent from "./Particle";
 const SocialIcons = lazy(() => import("./SocialIcons"));
 const LogoComponent = lazy(() => import("./LogoComponent"));
 
 const Main = () => {
 	const [click, setClick] = useState(false);
 	const [path, setPath] = useState("");
-
-	const handleClick = () => setClick(!click);
-	const scaleVariants = {
-		whileInView: {
-			scale: [0, 1],
-			opacity: [0, 1],
-			transition: {
-				duration: 1,
-				ease: "easeInOut",
-			},
-		},
-	};
 
 	const pageTransition = {
 		type: "tween",
@@ -57,7 +45,8 @@ const Main = () => {
 				animate={{ opacity: 1 }}
 				exit={path === "about" || path === "skills" ? moveY : moveX}
 				transition={{ duration: 0.5 }}>
-				<div className={`darkdiv click`} />
+				<ParticleComponent backgroundColor="#000000" particleColor="#ff0000" />
+
 				<div className="container">
 					<LogoComponent theme={click ? "dark" : "dark"} />
 
