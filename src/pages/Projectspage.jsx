@@ -2,11 +2,14 @@ import React from "react";
 
 import TransitionEffect from "../Components/TransitionEffect";
 import Qualification from "../container/Qualification/Qualification";
+import "./ProjectPage.css";
 const Projectspage = () => {
 	return (
 		<>
-			<TransitionEffect />
-			<Qualification />
+			<div className="project-container">
+				<TransitionEffect />
+				<Qualification />
+			</div>
 		</>
 	);
 };

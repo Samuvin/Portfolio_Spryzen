@@ -4,7 +4,7 @@ import { loadSlim } from "@tsparticles/slim"; // Using loadSlim for a lightweigh
 
 const ParticleComponent = () => {
 	const [init, setInit] = useState(false);
-	const [color, setColor] = useState("#cbcce9"); // Initial color
+	const [color, setColor] = useState("#bbbb"); // Initial color
 
 	useEffect(() => {
 		initParticlesEngine(async (engine) => {
@@ -12,25 +12,6 @@ const ParticleComponent = () => {
 		}).then(() => {
 			setInit(true);
 		});
-	}, []);
-
-	useEffect(() => {
-		// Function to handle color change on classChange event
-		const handleClassChange = () => {
-			// Update the color based on some condition
-			const newColor = document.body.classList.contains("dark-mode")
-				? "#fff"
-				: "#43459d";
-			setColor(newColor);
-		};
-
-		// Listen for the classChange event
-		document.body.addEventListener("classChange", handleClassChange);
-
-		// Cleanup event listener on unmount
-		return () => {
-			document.body.removeEventListener("classChange", handleClassChange);
-		};
 	}, []);
 	console.log(color);
 	const options = useMemo(

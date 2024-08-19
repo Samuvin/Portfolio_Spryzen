@@ -13,16 +13,22 @@ const LogoComponent = () => {
 	}, []);
 
 	const changeTheme = () => {
-		if (isDarkTheme) {
-			document.body.classList.remove("dark-theme");
-			localStorage.setItem("theme", "light");
-		} else {
+		const newTheme = !isDarkTheme ? "dark" : "light";
+		setIsDarkTheme(!isDarkTheme);
+
+		// Toggle theme on body
+		if (newTheme === "dark") {
 			document.body.classList.add("dark-theme");
 			localStorage.setItem("theme", "dark");
+			localStorage.setItem("particleColor", "#fff"); // Set particle color for dark theme
+		} else {
+			document.body.classList.remove("dark-theme");
+			localStorage.setItem("theme", "light");
+			localStorage.setItem("particleColor", "#43459d"); // Set particle color for light theme
 		}
 
-		// Toggle the theme state
-		setIsDarkTheme(!isDarkTheme);
+		// Trigger the storage event manually to update components in the same tab
+		window.dispatchEvent(new Event("storage"));
 	};
 
 	return (

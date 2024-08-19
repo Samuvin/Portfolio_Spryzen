@@ -1,35 +1,3 @@
-/* General Container Styling */
-.about-container {
-	overflow-x: hidden;
-	padding: 2rem;
-	color: var(--black-color);
-	position: relative;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	max-width: 100%;
-	box-sizing: border-box;
-}
-
-/* Background Text Styling */
-.about-container::before {
-	content: "ABOUT";
-	position: fixed;
-	top: 2rem;
-	left: 2rem;
-	font-size: calc(8vw + 2rem); /* Adjusted for responsiveness */
-	font-weight: 800;
-	color: var(--fade-color);
-	letter-spacing: calc(1vw + 1rem); /* Adjusted for responsiveness */
-	z-index: -1;
-	pointer-events: none;
-	white-space: nowrap;
-	user-select: none;
-	max-width: 100vw;
-	overflow-x: hidden;
-	box-sizing: border-box;
-}
-
 /* Grid Container Styling */
 .grid-container {
 	display: grid;

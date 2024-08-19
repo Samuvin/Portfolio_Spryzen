@@ -1,7 +1,7 @@
-/* ParticleStyles.css */
+:root {
+	--particle-color: red; /* Default particle color */
+}
 
-#tsparticles {
-	width: 100%;
-	height: 100vh; /* Ensure the particles container fills the viewport */
-	background-color: var(--particle-background-color) !important;
+body.dark-theme {
+	--particle-color: green; /* Particle color in dark mode */
 }
