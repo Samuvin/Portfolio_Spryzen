@@ -28,9 +28,9 @@ const Intro = () => {
 					animate={{ opacity: 1 }}
 					transition={{ duration: 1, delay: 2 }}>
 					<h1 className="Intro_Text">Hi,</h1>
-					<h3 className="Intro_Text">I'm Spryzen.</h3>
+					<h3 className="Intro_Text">I'm Samuvin</h3>
 					<h4 className="Intro_Text">
-						I design and Code simple yet beautiful websites.
+						I solve complex problems, one line of code at a time.
 					</h4>
 				</motion.div>
 			</div>

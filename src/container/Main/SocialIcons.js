@@ -3,9 +3,8 @@ import React from "react";
 // import { a } from 'react-router-dom'
 import { FaGithub } from "react-icons/fa";
 import { ImLinkedin } from "react-icons/im";
+import { FaDiscord } from "react-icons/fa";
 import { TiSocialInstagram } from "react-icons/ti";
-import { TfiTwitterAlt } from "react-icons/tfi";
-
 import "./SocialIcons.css";
 
 const SocialIcons = () => {
@@ -19,7 +18,7 @@ const SocialIcons = () => {
 					style={{ color: "inherit" }}
 					target="_blank"
 					rel="noopener noreferrer"
-					href={"https://github.com/codebucks27"}>
+					href={"https://github.com/Samuvin"}>
 					<div className="Social_Icons">
 						<FaGithub size={25} />
 					</div>
@@ -33,7 +32,7 @@ const SocialIcons = () => {
 					style={{ color: "inherit" }}
 					target="_blank"
 					rel="noopener noreferrer"
-					href={"https://twitter.com/code_bucks"}>
+					href={"https://www.linkedin.com/in/samuvin-jenish-964830265/"}>
 					<div className="Social_Icons">
 						<ImLinkedin size={25} />
 					</div>
@@ -47,9 +46,9 @@ const SocialIcons = () => {
 					style={{ color: "inherit" }}
 					target="_blank"
 					rel="noopener noreferrer"
-					href={"https://facebook.com/codebucks27"}>
+					href={"https://discordapp.com/users/911452785957011507"}>
 					<div className="Social_Icons">
-						<TiSocialInstagram size={30} />
+						<FaDiscord size={30} />
 					</div>
 				</a>
 			</motion.div>
@@ -61,9 +60,11 @@ const SocialIcons = () => {
 					style={{ color: "inherit" }}
 					target="_blank"
 					rel="noopener noreferrer"
-					href={"https://youtube.com"}>
+					href={
+						"https://www.instagram.com/astral_spry.zen/profilecard/?igsh=MTF4OHVreWxnd2Q5dg=="
+					}>
 					<div className="Social_Icons">
-						<TfiTwitterAlt size={25} />
+						<TiSocialInstagram size={30} />
 					</div>
 				</a>
 			</motion.div>

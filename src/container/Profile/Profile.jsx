@@ -41,25 +41,44 @@ function About() {
 					transition={{ duration: 1 }}>
 					<h2 className="bio-heading">BIOGRAPHY</h2>
 					<p className="bio-text">
-						Hi, I&apos;m <strong className="highlighted-text">CodeBucks</strong>
-						, a web developer and UI/UX designer with a passion for creating
-						stunning, functional, and user-centered digital experiences.
+						Hi, I&apos;m <strong className="highlighted-text">Samuvin</strong>,
+						a passionate web developer dedicated to creating stunning,
+						functional, and user-centered digital experiences. My unique
+						combination of skills sets me apart in the tech industry.
 					</p>
 					<p className="bio-text">
-						With{" "}
-						<strong className="highlighted-text">4 years of experience</strong>{" "}
-						in the industry, I am always eager to find new and innovative
-						solutions to bring my clients&apos; visions to life.
+						My primary focus lies in{" "}
+						<strong className="highlighted-text">
+							competitive programming
+						</strong>
+						, where I thrive on solving complex challenges and refining my
+						coding abilities. This rigorous discipline not only sharpens my
+						technical skills but also enhances my analytical thinking—an
+						invaluable asset in any development environment.
 					</p>
 					<p className="bio-text">
-						Design, to me, is not just about aesthetics; it&apos;s about
-						crafting intuitive, problem-solving experiences that users enjoy.
+						In addition to my programming expertise, I actively engage in{" "}
+						<strong className="highlighted-text">
+							public speaking as a Toastmaster
+						</strong>
+						. This experience has equipped me with the confidence and clarity to
+						communicate ideas effectively, ensuring that I can collaborate
+						seamlessly with teams and present concepts in a compelling manner.
 					</p>
 					<p className="bio-text">
-						Whether working on a website, mobile app, or other digital product,
-						I bring my dedication to design excellence and user-centric thinking
-						to every project. I am excited to bring my skills and passion to
-						your next project.
+						I excel in the{" "}
+						<strong className="highlighted-text">MERN stack</strong>, crafting
+						digital experiences that are both visually appealing and highly
+						functional. While I am a recent college graduate with no
+						professional experience, my commitment to continuous learning and
+						growth has armed me with the skills and mindset needed to make a
+						meaningful impact.
+					</p>
+					<p className="bio-text">
+						I am eager to bring my unique blend of problem-solving,
+						communication, and technical expertise to your team. With a strong
+						desire to contribute and innovate, I am ready to take on new
+						challenges and help drive success in your organization.
 					</p>
 				</motion.div>
 
@@ -85,9 +104,9 @@ function About() {
 						animate={{ opacity: 1, y: 0 }}
 						transition={{ duration: 1, delay: 0.3 }}>
 						<span className="stat-number">
-							<AnimatedNumberFramerMotion value={40} />+
+							<AnimatedNumberFramerMotion value={1500} />+
 						</span>
-						<h2 className="stat-title">Satisfied Clients</h2>
+						<h2 className="stat-title">Problems Solved</h2>
 					</motion.div>
 
 					<motion.div
@@ -96,9 +115,9 @@ function About() {
 						animate={{ opacity: 1, y: 0 }}
 						transition={{ duration: 1, delay: 0.6 }}>
 						<span className="stat-number">
-							<AnimatedNumberFramerMotion value={50} />+
+							<AnimatedNumberFramerMotion value={150} />+
 						</span>
-						<h2 className="stat-title">Projects Completed</h2>
+						<h2 className="stat-title">Contest Attended</h2>
 					</motion.div>
 
 					<motion.div
@@ -107,9 +126,9 @@ function About() {
 						animate={{ opacity: 1, y: 0 }}
 						transition={{ duration: 1, delay: 0.9 }}>
 						<span className="stat-number">
-							<AnimatedNumberFramerMotion value={4} />+
+							<AnimatedNumberFramerMotion value={5} />+
 						</span>
-						<h2 className="stat-title">Years of Experience</h2>
+						<h2 className="stat-title">Coading Hackathons</h2>
 					</motion.div>
 				</div>
 			</div>
