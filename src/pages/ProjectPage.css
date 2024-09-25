@@ -1,6 +1,5 @@
 /* General Container Styling */
 .project-container {
-	overflow-x: hidden;
 	padding: 2rem;
 	color: var(--black-color);
 	position: relative;
