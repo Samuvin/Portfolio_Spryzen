@@ -1,5 +1,5 @@
 import React, { useRef, useEffect } from "react";
-import "./Qualification.css";
+import "./Projects.css"; // Change file name accordingly
 import { LiaAtomSolid } from "react-icons/lia";
 import {
 	VerticalTimeline,
@@ -91,7 +91,7 @@ const TimelineElement = ({
 	);
 };
 
-function App() {
+function Project() {
 	return (
 		<div className="Project_Container">
 			<h1 className="timeline-heading">Projects</h1>
@@ -132,13 +132,9 @@ function App() {
 					icon={<WorkIcon />}
 					position="left"
 				/>
-				<VerticalTimelineElement
-					iconStyle={{ background: "#343579", color: "#fff" }}
-					icon={<WorkIcon />}
-				/>
 			</VerticalTimeline>
 		</div>
 	);
 }
 
-export default AppWrap(MotionWrap(App, "app__works"));
+export default Project;

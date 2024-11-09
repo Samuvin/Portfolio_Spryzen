@@ -7,7 +7,7 @@ import "./Main.css";
 import AboutPage from "../../pages/Aboutpage";
 import Projectspage from "../../pages/Projectspage";
 import Skillspage from "../../pages/Skillspage";
-import Footer from "../footer/Footer";
+import Contact from "../Contact/Contact";
 import TransitionEffect from "../../Components/TransitionEffect";
 import ParticleComponent from "./Particle";
 const SocialIcons = lazy(() => import("./SocialIcons"));
@@ -33,7 +33,7 @@ const Main = () => {
 		<Route path="/about" element={<AboutPage />} />
 		<Route path="/skills" element={<Skillspage />} />
 		<Route path="/projects" element={<Projectspage />} />
-		<Route path="/contact" element={<Footer />} />
+		<Route path="/contact" element={<Contact />} />
 	</Routes>;
 	return (
 		<Suspense fallback={<Loading />}>

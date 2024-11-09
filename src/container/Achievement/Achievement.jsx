@@ -4,22 +4,22 @@ import { motion } from "framer-motion";
 
 import { AppWrap, MotionWrap } from "../../wrapper";
 import sass from "../../assets/sass.png"; // Replace this with actual image imports
-import "./Testimonial.css";
+import "./Achievement.css";
 
-const testimonialsData = [
+const achievementsData = [
 	{
 		imgurl: sass,
-		feedback: "Great service!",
-		name: "John Doe",
-		company: "Company A",
+		description: "Won 1st place in National Coding Competition",
+		title: "National Coding Championship",
+		organization: "Tech Society",
 	},
 	{
 		imgurl: sass,
-		feedback: "Highly recommended!",
-		name: "Jane Smith",
-		company: "Company B",
+		description: "Completed AI Course with Distinction",
+		title: "AI Excellence Award",
+		organization: "AI Academy",
 	},
-	// Add more testimonials as needed
+	// Add more achievements as needed
 ];
 
 const brandsData = [
@@ -36,7 +36,7 @@ const brandsData = [
 	// Add more brands as needed
 ];
 
-const Testimonial = () => {
+const Achievement = () => {
 	const [currentIndex, setCurrentIndex] = useState(0);
 
 	const handleClick = (index) => {
@@ -45,35 +45,35 @@ const Testimonial = () => {
 
 	return (
 		<>
-			{testimonialsData.length > 0 && (
+			{achievementsData.length > 0 && (
 				<>
-					<div className="app__testimonial-item app__flexm Project">
+					<div className="app__achievement-item app__flexm Project">
 						<img
-							src={testimonialsData[currentIndex].imgurl}
-							alt={testimonialsData[currentIndex].name}
+							src={achievementsData[currentIndex].imgurl}
+							alt={achievementsData[currentIndex].title}
 						/>
-						<div className="app__testimonial-content">
+						<div className="app__achievement-content">
 							<p className="p-text">
-								{testimonialsData[currentIndex].feedback}
+								{achievementsData[currentIndex].description}
 							</p>
 							<div>
 								<h4 className="bold-text">
-									{testimonialsData[currentIndex].name}
+									{achievementsData[currentIndex].title}
 								</h4>
 								<h5 className="p-text">
-									{testimonialsData[currentIndex].company}
+									{achievementsData[currentIndex].organization}
 								</h5>
 							</div>
 						</div>
 					</div>
 
-					<div className="app__testimonial-btns app__flex">
+					<div className="app__achievement-btns app__flex">
 						<div
 							className="app__flex"
 							onClick={() =>
 								handleClick(
 									currentIndex === 0
-										? testimonialsData.length - 1
+										? achievementsData.length - 1
 										: currentIndex - 1
 								)
 							}>
@@ -84,7 +84,7 @@ const Testimonial = () => {
 							className="app__flex"
 							onClick={() =>
 								handleClick(
-									currentIndex === testimonialsData.length - 1
+									currentIndex === achievementsData.length - 1
 										? 0
 										: currentIndex + 1
 								)
@@ -95,23 +95,7 @@ const Testimonial = () => {
 				</>
 			)}
 
-			<div className="app__testimonial-brands app__flex1">
-				{brandsData.map((brand) => (
-					<motion.div
-						whileInView={{ opacity: [0, 1] }}
-						transition={{ duration: 0.5, type: "tween" }}
-						key={brand._id}>
-						<img src={brand.imgUrl} alt={brand.name} />
-					</motion.div>
-				))}
-				{brandsData.map((brand) => (
-					<motion.div
-						whileInView={{ opacity: [0, 1] }}
-						transition={{ duration: 0.5, type: "tween" }}
-						key={brand._id}>
-						<img src={brand.imgUrl} alt={brand.name} />
-					</motion.div>
-				))}
+			<div className="app__achievement-brands app__flex1">
 				{brandsData.map((brand) => (
 					<motion.div
 						whileInView={{ opacity: [0, 1] }}
@@ -125,4 +109,4 @@ const Testimonial = () => {
 	);
 };
 
-export default MotionWrap(Testimonial, "app__testimonial");
+export default Achievement;

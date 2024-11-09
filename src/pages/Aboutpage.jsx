@@ -1,6 +1,6 @@
 import React from "react";
-import About from "../container/About/About";
-import Testimonial from "../container/Testimonial/Testimonial";
+import CodingProfile from "../container/CodingProfile/CodingProfile";
+import Achievement from "../container/Achievement/Achievement";
 
 import Profile from "../container/Profile/Profile";
 import TransitionEffect from "../Components/TransitionEffect";
@@ -11,9 +11,8 @@ const AboutPage = () => {
 			<div className="About-container">
 				<TransitionEffect />
 				<Profile />
-				<About />
-
-				<Testimonial />
+				<CodingProfile />
+				<Achievement />
 			</div>
 		</>
 	);

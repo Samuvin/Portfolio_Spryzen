@@ -1,0 +1,70 @@
+.app__codingProfile {
+	flex: 1;
+	width: 100%;
+	flex-direction: column;
+}
+
+.app__profiles {
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	flex-wrap: wrap;
+	margin-top: 2rem;
+}
+
+.app__profile-item {
+	width: 200px;
+	height: 300px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	margin: 1.5rem;
+	padding: 1.5rem;
+	border: 1px solid #e0e0e0;
+	border-radius: 15px;
+	background-color: #f9f9f9;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.app__profile-item svg {
+	font-size: 50px;
+	color: #6a5acd;
+	margin-bottom: 10px;
+	transition: color 0.3s;
+}
+
+.app__profile-item svg:hover {
+	color: #483d8b;
+}
+
+.app__profile-item h2 {
+	font-size: 1.2rem;
+	color: #333;
+	margin: 10px 0;
+}
+
+.app__profile-item p {
+	font-size: 0.9rem;
+	color: #666;
+	text-align: center;
+	text-overflow: ellipsis;
+	max-height: 40px;
+}
+
+.app__profile-item:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+@media screen and (min-width: 2000px) {
+	.app__profile-item {
+		width: 370px;
+		height: 320px;
+	}
+
+	.app__profile-item img {
+		height: 320px;
+	}
+}

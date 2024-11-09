@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { images } from "../../constants";
 import { AppWrap, MotionWrap } from "../../wrapper";
-import "./Footer.css";
+import "./Contact.css";
 
-const Footer = () => {
+const Contact = () => {
 	const [formData, setFormData] = useState({
 		name: "",
 		email: "",
@@ -31,28 +31,28 @@ const Footer = () => {
 
 	return (
 		<>
-			<h2 className="head-text">Chat with me</h2>
+			<h2 className="head-text">Contact Me</h2>
 
-			<div className="app__footer-cards">
-				<div className="app__footer-card ">
+			<div className="app__contact-cards">
+				<div className="app__contact-card">
 					<img src={images.email} alt="email" />
 					<a href="mailto:samuvin.j@gmail.com" className="Intro-text">
-						hello@micael.com
+						samuvin.j@gmail.com
 					</a>
 				</div>
-				<div className="app__footer-card">
+				<div className="app__contact-card">
 					<img src={images.mobile} alt="phone" />
-					<a href="tel:+1 (123) 456-7890" className="Intro-text">
-						+1 (123) 456-7890
+					<a href="tel:+91 9876543210" className="Intro-text">
+						+91 9876543210
 					</a>
 				</div>
 			</div>
 
 			{!isFormSubmitted ? (
-				<div className="app__footer-form app__flex">
+				<div className="app__contact-form app__flex">
 					<div className="app__flex">
 						<input
-							className="Name-text "
+							className="Name-text"
 							type="text"
 							placeholder="Your Name"
 							name="name"
@@ -93,7 +93,7 @@ const Footer = () => {
 };
 
 export default AppWrap(
-	MotionWrap(Footer, "app__footer app__flex"),
+	MotionWrap(Contact, "app__contact app__flex"),
 	"contact",
 	"app__whitebg"
 );

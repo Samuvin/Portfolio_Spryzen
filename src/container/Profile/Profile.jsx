@@ -136,4 +136,4 @@ function About() {
 	);
 }
 
-export default AppWrap(MotionWrap(About, "app__about app__flex"), "about");
+export default About;

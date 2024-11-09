@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 import { MoonIcon, SunIcon } from "./Icons";
 import { RiAppsLine } from "react-icons/ri";
-import "./Nav.css";
+import "./Navbar.css";
 import { BiHome } from "react-icons/bi";
 import { TbUserHexagon } from "react-icons/tb";
 import { GrTechnology } from "react-icons/gr";
@@ -12,7 +12,7 @@ import { VscGitPullRequest, VscLiveShare } from "react-icons/vsc";
 import { GiPerpendicularRings } from "react-icons/gi";
 const MotionLink = motion(Link);
 
-const Nav = () => {
+const Navbar = () => {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
 	const [isDarkTheme, setIsDarkTheme] = useState(false);
 	const location = useLocation(); // Get the current location
@@ -149,4 +149,4 @@ const Nav = () => {
 	);
 };
 
-export default Nav;
+export default Navbar;

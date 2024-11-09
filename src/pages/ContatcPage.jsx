@@ -1,13 +1,13 @@
 import React from "react";
 import TransitionEffect from "../Components/TransitionEffect";
-import Footer from "../container/footer/Footer";
+import Contact from "../container/Contact/Contact";
 import "./ContactPage.css";
 const ContatcPage = () => {
 	return (
 		<>
 			<div className="contact-container">
 				<TransitionEffect />
-				<Footer />
+				<Contact />
 			</div>
 		</>
 	);
