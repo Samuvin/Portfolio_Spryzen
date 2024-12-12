@@ -10,7 +10,7 @@ const Skillspage = () => {
 			<TransitionEffect />
 			<div className="skills-container">
 				<Skills />
-				<Certificates />
+				{/* <Certificates /> */}
 			</div>
 		</>
 	);

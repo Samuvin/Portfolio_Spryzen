@@ -1,8 +1,7 @@
 import React, { useEffect, useRef } from "react";
-import profile from "./img.jpg";
+import profile from "../../assets/profile.jpg";
 import { useInView, useMotionValue, useSpring, motion } from "framer-motion";
 import AnimatedText from "./AnimatedText";
-import { AppWrap, MotionWrap } from "../../wrapper";
 import "./Profile.css";
 
 function AnimatedNumberFramerMotion({ value }) {
@@ -90,7 +89,6 @@ function About() {
 					<motion.img
 						className="profile-image"
 						src={profile}
-						alt="Codebucks"
 						initial={{ opacity: 0, x: 100 }}
 						animate={{ opacity: 1, x: 0 }}
 						transition={{ duration: 1.2 }}
@@ -104,7 +102,7 @@ function About() {
 						animate={{ opacity: 1, y: 0 }}
 						transition={{ duration: 1, delay: 0.3 }}>
 						<span className="stat-number">
-							<AnimatedNumberFramerMotion value={1500} />+
+							<AnimatedNumberFramerMotion value={2200} />+
 						</span>
 						<h2 className="stat-title">Problems Solved</h2>
 					</motion.div>
@@ -115,7 +113,7 @@ function About() {
 						animate={{ opacity: 1, y: 0 }}
 						transition={{ duration: 1, delay: 0.6 }}>
 						<span className="stat-number">
-							<AnimatedNumberFramerMotion value={150} />+
+							<AnimatedNumberFramerMotion value={200} />+
 						</span>
 						<h2 className="stat-title">Contest Attended</h2>
 					</motion.div>

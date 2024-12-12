@@ -51,10 +51,7 @@ const Main = () => {
 					<LogoComponent theme={click ? "dark" : "dark"} />
 
 					{mq ? <SocialIcons /> : <SocialIcons />}
-					<a
-						className={`contact ${click ? "click" : ""}`}
-						target="_blank"
-						href="mailto:samuvin.j@gmail.com">
+					<p className={`contact ${click ? "click" : ""}`}>
 						<motion.h3
 							initial={{
 								y: -200,
@@ -68,7 +65,7 @@ const Main = () => {
 							whileTap={{ scale: 0.9 }}>
 							Say hi..
 						</motion.h3>
-					</a>
+					</p>
 
 					<NavLink
 						className={`blog ${click ? "click" : ""}`}

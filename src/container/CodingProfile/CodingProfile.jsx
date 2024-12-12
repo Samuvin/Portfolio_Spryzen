@@ -1,6 +1,5 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { AppWrap, MotionWrap } from "../../wrapper";
 import { Link } from "react-router-dom";
 import {
 	SiLeetcode,

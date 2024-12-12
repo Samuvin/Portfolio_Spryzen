@@ -134,7 +134,7 @@ const skills = [
 const Skills = () => (
 	<>
 		<TransitionEffect />
-		<h2 className="head-text">Skills & Education</h2>
+		<h2 className="head-text">Skills & Extracurricular</h2>
 
 		<div className="app__skills-container">
 			<motion.div className="app__skills-list">

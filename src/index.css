@@ -1,19 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap");
-/*
-:root {
-	--font-base: "DM Sans", sans-serif;
 
-	--primary-color: #edf2f8;
-	--secondary-color: #313bac;
-	--black-color: #030303;
-	--lightGray-color: #e4e4e4;
-	--gray-color: #6b7688;
-	--brown-color: #46364a;
-	--white-color: #ffffff;
-}
-*/
 /*==================== GOOGLE FONTS ====================*/
-/* @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"); */
 * {
 	box-sizing: border-box;
 	padding: 0;
@@ -55,7 +42,7 @@
 	--gray-color: #6b7688;
 	--brown-color: #46364a;
 	--white-color: #ffffff;
-
+	--highlight-color:black
 	/*========== Colors ==========*/
 	/* Change favorite color */
 	--hue-color: 240; /* Adjusted to match the new color palette */
@@ -71,6 +58,7 @@
 	--input-color: hsl(240, 50%, 96%);
 	--body-color: hsl(240, 50%, 99%);
 	--container-color: #ffffff;
+	--svg-color: black;
 	--scroll-bar-color: hsl(240, 12%, 90%);
 	--scroll-thumb-color: hsl(240, 12%, 80%);
 
@@ -127,6 +115,7 @@
 
 /*========== Variables Dark theme ==========*/
 body.dark-theme {
+	--svg-color: white;
 	--subtitle-color: rgba(255, 255, 255, 0.9);
 	--fade-color: rgba(107, 108, 191, 0.4);
 	--theme-body: var(--glossy-background);
@@ -168,7 +157,7 @@ body.dark-theme {
 		50,
 		0.8
 	); /* Same as base color for consistency */
-
+	--highlight-color:white
 	--intro-color: #fff;
 
 	--black-color: rgba(255, 255, 255, 1);
@@ -202,6 +191,10 @@ body.dark-theme {
 /* Applying the gradient background feel to the entire body */
 body.dark-theme {
 	background: var(--glossy-background);
+}
+
+.highlighted-text {
+	color: var(--Project---highlight-color);
 }
 
 /* Adjust the scrollbar appearance */

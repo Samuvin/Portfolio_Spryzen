@@ -10,11 +10,11 @@ import "./App.css";
 import ContatcPage from "./pages/ContatcPage";
 import { lazy, Suspense } from "react";
 import Loading from "./container/Main/Loading";
-//Components
+
 const Main = lazy(() => import("./container/Main/Main"));
 
 const App = () => {
-	const location = useLocation(); // Get the current location
+	const location = useLocation();
 
 	return (
 		<Suspense fallback={<Loading />}>

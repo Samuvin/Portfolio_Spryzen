@@ -23,31 +23,30 @@
 	padding: 1.5rem;
 	border: 1px solid #e0e0e0;
 	border-radius: 15px;
-	background-color: #f9f9f9;
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 	transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .app__profile-item svg {
 	font-size: 50px;
-	color: #6a5acd;
+	color: var(--secondary-color);
 	margin-bottom: 10px;
 	transition: color 0.3s;
 }
 
 .app__profile-item svg:hover {
-	color: #483d8b;
+	color: var(--svg-color);
 }
 
 .app__profile-item h2 {
 	font-size: 1.2rem;
-	color: #333;
+	color: var(--gray-color);
 	margin: 10px 0;
 }
 
 .app__profile-item p {
 	font-size: 0.9rem;
-	color: #666;
+	color: var(--gray-color);
 	text-align: center;
 	text-overflow: ellipsis;
 	max-height: 40px;

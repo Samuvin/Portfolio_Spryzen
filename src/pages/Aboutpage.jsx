@@ -5,6 +5,7 @@ import Achievement from "../container/Achievement/Achievement";
 import Profile from "../container/Profile/Profile";
 import TransitionEffect from "../Components/TransitionEffect";
 import "./AboutPage.css";
+import SocialIcons from "../container/Main/SocialIcons";
 const AboutPage = () => {
 	return (
 		<>
@@ -13,6 +14,7 @@ const AboutPage = () => {
 				<Profile />
 				<CodingProfile />
 				<Achievement />
+				<SocialIcons />
 			</div>
 		</>
 	);

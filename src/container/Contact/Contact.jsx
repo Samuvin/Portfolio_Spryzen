@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { images } from "../../constants";
-import { AppWrap, MotionWrap } from "../../wrapper";
 import "./Contact.css";
 
 const Contact = () => {
@@ -92,8 +91,4 @@ const Contact = () => {
 	);
 };
 
-export default AppWrap(
-	MotionWrap(Contact, "app__contact app__flex"),
-	"contact",
-	"app__whitebg"
-);
+export default Contact;

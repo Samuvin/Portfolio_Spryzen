@@ -1,11 +1,10 @@
 import React, { useState } from "react";
 import { AiFillEye, AiFillGithub } from "react-icons/ai";
 import { motion } from "framer-motion";
-import { AppWrap, MotionWrap } from "../../wrapper";
 import about01 from "../../assets/about01.png";
 import "./Certificates.css";
 
-// Define a local array to replace the backend data
+
 const certificates = [
 	{
 		title: "Certificate 1",
@@ -23,7 +22,6 @@ const certificates = [
 		codeLink: "https://github.com/certificate2",
 		tags: ["Mobile App", "React JS"],
 	},
-	// Add more certificates as needed
 ];
 
 const Certificates = () => {
