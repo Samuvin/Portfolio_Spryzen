@@ -120,8 +120,4 @@ const Certificates = () => {
 	);
 };
 
-export default AppWrap(
-	MotionWrap(Certificates, "app__certificates app__flex"),
-	"certificates",
-	"app__primarybg"
-);
+export default Certificates;

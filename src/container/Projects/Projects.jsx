@@ -6,7 +6,8 @@ import {
 	VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
-import { AppWrap, MotionWrap } from "../../wrapper";
+import { LuCodesandbox } from "react-icons/lu";
+import { MdWebhook } from "react-icons/md";
 import { motion, useInView, useAnimation } from "framer-motion";
 
 const WorkIcon = () => (
@@ -22,7 +23,7 @@ const WorkIcon = () => (
 			style={{
 				width: "80%",
 				height: "80%",
-				animation: "rotate 2s linear infinite", // Apply the rotation animation
+				animation: "rotate 2s linear infinite",
 			}}
 		/>
 	</div>
@@ -42,14 +43,11 @@ const TimelineElement = ({
 	icon,
 	position,
 }) => {
-	// Ref for the element
 	const ref = useRef(null);
-	// Animation controls
 	const controls = useAnimation();
-	// Check if the element is in view with a threshold of 50%
+
 	const inView = useInView(ref, { triggerOnce: false, threshold: 0.5 });
 
-	// Slide up and out variants for content
 	const slideUpContentVariants = {
 		initial: { opacity: 0, y: "100%" }, // Start below the container
 		animate: { opacity: 1, y: 0 }, // Move to the center of the container
@@ -98,39 +96,274 @@ function Project() {
 			<VerticalTimeline>
 				<TimelineElement
 					className="vertical-timeline-element--work"
-					date="2011 - present"
-					title="Creative Director"
-					subtitle="Miami, FL"
-					content="Creative Direction, User Experience, Visual Design, Project Management, Team Leading"
+					date={
+						<>
+							<span style={{ marginRight: "10px" }}>
+								<a
+									href="https://auro-connect-r9mk.onrender.com"
+									target="_blank"
+									rel="noopener noreferrer"
+									style={{
+										textDecoration: "none",
+										color: "inherit",
+										transition: "color 0.3s ease",
+									}}>
+									<LuCodesandbox
+										size={25}
+										style={{ cursor: "pointer" }}
+										onMouseEnter={(e) =>
+											(e.currentTarget.style.color = "#6B6CBF")
+										}
+										onMouseLeave={(e) =>
+											(e.currentTarget.style.color = "inherit")
+										}
+									/>
+								</a>
+							</span>
+							<span>
+								<a
+									href="https://github.com/Samuvin/Auro_Connect"
+									target="_blank"
+									rel="noopener noreferrer"
+									style={{
+										textDecoration: "none",
+										color: "inherit",
+										transition: "color 0.3s ease",
+									}}>
+									<MdWebhook
+										size={25}
+										style={{ cursor: "pointer" }}
+										onMouseEnter={(e) =>
+											(e.currentTarget.style.color = "#6B6CBF")
+										}
+										onMouseLeave={(e) =>
+											(e.currentTarget.style.color = "inherit")
+										}
+									/>
+								</a>
+							</span>
+						</>
+					}
+					title="Auro_Connect"
+					subtitle="Dynamic social media platform"
+					content={
+						<div
+							style={{
+								maxHeight: "100px", // Adjust the height as needed
+								overflowY: "scroll", // Enable vertical scrolling
+								paddingRight: "10px",
+								scrollbarWidth: "none", // For Firefox
+								msOverflowStyle: "none", // For Internet Explorer
+							}}>
+							<ul>
+								<li>
+									<strong>Dynamic Social Platform for Programmers:</strong>
+									Auro_Connect is a dedicated platform designed for programmers,
+									fostering collaboration, focus, and consistency while
+									minimizing distractions.
+								</li>
+								<li>
+									<strong>Robust API Integration:</strong>
+									Developed RESTful APIs to support seamless user interactions,
+									enabling features such as posting updates, commenting, and
+									tracking progress within a collaborative environment.
+								</li>
+								<li>
+									<strong>Contest Wishlist & Reminders:</strong>
+									Provides a contest wishlist feature where users can mark their
+									favorite upcoming contests. Automated reminders ensure they
+									stay informed and never miss important events.
+								</li>
+								<li>
+									<strong>Interactive User Engagement:</strong>
+									Allows programmers to share updates, engage with peers through
+									comments, and build a supportive coding community.
+								</li>
+								<li>
+									<strong>Focus on Productivity:</strong>
+									The platform’s design prioritizes reducing distractions,
+									helping users maintain a consistent focus on their goals and
+									projects.
+								</li>
+							</ul>
+						</div>
+					}
 					icon={<WorkIcon />}
 					position="right"
 				/>
 				<TimelineElement
 					className="vertical-timeline-element--work"
-					date="2010 - 2011"
-					title="Art Director"
-					subtitle="San Francisco, CA"
-					content="Creative Direction, User Experience, Visual Design, SEO, Online Marketing"
+					date={
+						<>
+							<span style={{ marginRight: "10px" }}>
+								<a
+									href="https://devnexus-rare.onrender.com"
+									target="_blank"
+									rel="noopener noreferrer"
+									style={{
+										textDecoration: "none",
+										color: "inherit",
+										transition: "color 0.3s ease",
+									}}>
+									<LuCodesandbox
+										size={25}
+										style={{ cursor: "pointer" }}
+										onMouseEnter={(e) =>
+											(e.currentTarget.style.color = "#6B6CBF")
+										}
+										onMouseLeave={(e) =>
+											(e.currentTarget.style.color = "inherit")
+										}
+									/>
+								</a>
+							</span>
+							<span>
+								<a
+									href="https://github.com/Samuvin/DevNexus"
+									target="_blank"
+									rel="noopener noreferrer"
+									style={{
+										textDecoration: "none",
+										color: "inherit",
+										transition: "color 0.3s ease",
+									}}>
+									<MdWebhook
+										size={25}
+										style={{ cursor: "pointer" }}
+										onMouseEnter={(e) =>
+											(e.currentTarget.style.color = "#6B6CBF")
+										}
+										onMouseLeave={(e) =>
+											(e.currentTarget.style.color = "inherit")
+										}
+									/>
+								</a>
+							</span>
+						</>
+					}
+					title="Dev_Nexus"
+					subtitle="Building Connections, Ensuring Integrity"
+					content={
+						<div
+							style={{
+								maxHeight: "100px", // Adjust the height as needed
+								overflowY: "scroll", // Enable vertical scrolling
+								paddingRight: "10px",
+								scrollbarWidth: "none", // For Firefox
+								msOverflowStyle: "none", // For Internet Explorer
+							}}>
+							<ul>
+								<li>
+									<strong>User Accounts & Profile Interaction:</strong>
+									Users can create an account, explore profiles through
+									interactive cards, and show interest or ignore other users.
+								</li>
+								<li>
+									<strong>Reporting System:</strong>
+									Users can report violations, view detailed reports on other
+									users' rule violations, and track actions taken against them.
+								</li>
+								<li>
+									<strong>Request Management:</strong>A page that shows incoming
+									connection requests where users can accept or decline them,
+									managing their network easily.
+								</li>
+							</ul>
+						</div>
+					}
 					icon={<WorkIcon />}
 					position="left"
 				/>
 				<TimelineElement
 					className="vertical-timeline-element--work"
-					date="2008 - 2010"
-					title="Web Designer"
-					subtitle="Los Angeles, CA"
-					content="User Experience, Visual Design"
+					date={
+						<>
+							<span style={{ marginRight: "10px" }}>
+								<a
+									href="https://contact-search-list.vercel.app"
+									target="_blank"
+									rel="noopener noreferrer"
+									style={{
+										textDecoration: "none",
+										color: "inherit",
+										transition: "color 0.3s ease",
+									}}>
+									<LuCodesandbox
+										size={25}
+										style={{ cursor: "pointer" }}
+										onMouseEnter={(e) =>
+											(e.currentTarget.style.color = "#6B6CBF")
+										}
+										onMouseLeave={(e) =>
+											(e.currentTarget.style.color = "inherit")
+										}
+									/>
+								</a>
+							</span>
+							<span>
+								<a
+									href="https://github.com/Samuvin/Contact_Search_List"
+									target="_blank"
+									rel="noopener noreferrer"
+									style={{
+										textDecoration: "none",
+										color: "inherit",
+										transition: "color 0.3s ease",
+									}}>
+									<MdWebhook
+										size={25}
+										style={{ cursor: "pointer" }}
+										onMouseEnter={(e) =>
+											(e.currentTarget.style.color = "#6B6CBF")
+										}
+										onMouseLeave={(e) =>
+											(e.currentTarget.style.color = "inherit")
+										}
+									/>
+								</a>
+							</span>
+						</>
+					}
+					title="AutoSuggest Contact"
+					subtitle="Trie Data Structure"
+					content={
+						<div
+							style={{
+								maxHeight: "100px",
+								overflowY: "scroll",
+								paddingRight: "10px",
+								scrollbarWidth: "none",
+								msOverflowStyle: "none",
+							}}>
+							<ul>
+								<li>
+									<strong>Efficient Storage:</strong> Uses a Trie to store
+									contact names, ensuring fast lookups and auto-suggestions.
+								</li>
+								<li>
+									<strong>Real-Time Suggestions:</strong> As the user types,
+									suggestions are displayed in real-time, making it easier to
+									find contacts quickly.
+								</li>
+								<li>
+									<strong>Contact Management:</strong> Supports adding and
+									removing contacts dynamically.
+								</li>
+								<li>
+									<strong>Scalable:</strong> The Trie data structure scales well
+									with an increasing number of contacts, maintaining fast
+									performance.
+								</li>
+							</ul>
+						</div>
+					}
 					icon={<WorkIcon />}
 					position="right"
 				/>
-				<TimelineElement
-					className="vertical-timeline-element--work"
-					date="2006 - 2008"
-					title="Web Designer"
-					subtitle="San Francisco, CA"
-					content="User Experience, Visual Design"
+				<VerticalTimelineElement
+					className="vertical-timeline-element--empty"
 					icon={<WorkIcon />}
-					position="left"
+					position="right"
 				/>
 			</VerticalTimeline>
 		</div>

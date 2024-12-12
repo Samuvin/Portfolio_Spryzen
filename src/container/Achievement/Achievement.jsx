@@ -3,34 +3,33 @@ import { HiChevronLeft, HiChevronRight } from "react-icons/hi";
 import { motion } from "framer-motion";
 
 import { AppWrap, MotionWrap } from "../../wrapper";
-import sass from "../../assets/sass.png"; // Replace this with actual image imports
+import cpp from "../../assets/cpp.png"; // Replace this with actual image imports
 import "./Achievement.css";
 
 const achievementsData = [
 	{
-		imgurl: sass,
+		imgurl: cpp,
 		description: "Won 1st place in National Coding Competition",
 		title: "National Coding Championship",
 		organization: "Tech Society",
 	},
 	{
-		imgurl: sass,
+		imgurl: cpp,
 		description: "Completed AI Course with Distinction",
 		title: "AI Excellence Award",
 		organization: "AI Academy",
 	},
-	// Add more achievements as needed
 ];
 
 const brandsData = [
 	{
 		_id: "1",
-		imgUrl: sass,
+		imgUrl: cpp,
 		name: "Brand A",
 	},
 	{
 		_id: "2",
-		imgUrl: sass,
+		imgUrl: cpp,
 		name: "Brand B",
 	},
 	// Add more brands as needed

@@ -236,6 +236,23 @@ button:hover,
 input[type="submit"]:hover {
 	background: var(--first-color-alt);
 }
+strong {
+	color: #343579;
+}
+.neon-icon {
+	transition: all 0.3s ease-in-out;
+}
+
+.neon-icon:hover {
+	transform: scale(1.1); /* Slightly increase the size on hover */
+	box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.8),
+		0 0 20px 10px rgba(255, 255, 255, 0.8); /* Stronger neon glow */
+}
+
+.vertical-timeline-element--empty .vertical-timeline-element-icon {
+	background-color: #343579;
+	/* If you want to change the icon's background */
+}
 
 /* input[type="text"],
 textarea {

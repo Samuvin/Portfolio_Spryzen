@@ -27,13 +27,6 @@ const profiles = [
 		link: "https://leetcode.com/u/Sun_fyre/",
 	},
 	{
-		title: "Codeforces",
-		description:
-			"Strengthens logical thinking with efficient algorithms for problem-solving.",
-		icon: <SiCodeforces />,
-		link: "https://codeforces.com/profile/samuvin.j",
-	},
-	{
 		title: "Geeksforgeeks",
 		description:
 			"Produces clear documentation and tutorials to bridge knowledge gaps.",
@@ -46,6 +39,13 @@ const profiles = [
 			"Promotes continuous learning and upskilling for the tech industry.",
 		icon: <SiCodingninjas />,
 		link: "https://www.naukri.com/code360/profile/Spryzen",
+	},
+	{
+		title: "Codolio",
+		description:
+			"Promotes continuous learning and upskilling for the tech industry.",
+		icon: <SiCodingninjas />,
+		link: "https://codolio.com/profile/Sun_Fyre",
 	},
 ];
 
